@@ -1,0 +1,523 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([
+  ["pages-person-person"], {
+    "20f7": function(t, n, e) {
+      "use strict";
+      e.r(n);
+      var i = e("6ea3"),
+        a = e.n(i);
+      for (var o in i)["default"].indexOf(o) < 0 && function(t) {
+        e.d(n, t, (function() {
+          return i[t]
+        }))
+      }(o);
+      n["default"] = a.a
+    },
+    "2a22": function(t, n) {
+      t.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAYAAABXuSs3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDphZjczMTgwZC04M2NlLTRiNDctYmIxMy1jZWEwYzI2MGEwMWUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RURBNkM1NTA2RkIyMTFFOEJDQjZDOTg2QjY1RUUxRDIiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RURBNkM1NEY2RkIyMTFFOEJDQjZDOTg2QjY1RUUxRDIiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MmZhMDk4YjktYjk4OS03ODRiLTlkOGEtZWU3M2EyY2I4MDRhIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOmFmNzMxODBkLTgzY2UtNGI0Ny1iYjEzLWNlYTBjMjYwYTAxZSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqarhfoAAARkSURBVHja7JhnbE5RGMffvkbTJkTtXSOILag9aotVo5pKbPKSGhG7hC9GbUFq9NUE8aFExUrQVrWIWStIjRpJQ2OPUFv9H/m/ydHc+ZYP5D7JL+eee88593/PeM5zbkBBQYHrX7QAR7gj3BHuCHeE/5/CExIS7LTTGDQB9UENUAkE8Vk+eA5ywV1wA9wya9Dj8Rg+L16Ej+4LBoGeoJ7NuvfACbAfpPrzcrvCA8EUMBE0LPRMevU+uAPegfdAhrMUKA0agLqgAj9UmAyyZYDBNvDxbwiPAbGgunLvFDgKMsA18MnCh7cA3UFvEM4OWA/mgiVgy58S3grEg7bMf2cPecFVnToy12vz+iHntthncIHEgeZgAnu+CtgMxjJ/1UiU20T0DJCliE6koBiNhitRzANOl2PkDu8tBxUL1bkOprNNnzdoA67AOczyV/hODqGLLw/n3M7VKDsG5ID5Sk/nExfvxXINjNao/xhM4jtu894aiN9lyx2iQjqSbsxK5fGcInqjsl5ZoOvY0/d5TxZkfzATlFXqbDDozEROGbGTcI3dTYVDdCaSLsxKL60wGJUeII3Xh8Eo8FanbAjYDfoxL72badC2LNaVPicA8V11pwpEH1dEe0xEiyUxPUef/tag7Gv2/CXm95hsQKuoQawLtB3TFI4H8XRRLs43r4noaFCe10NsuNUIZTFHmYj3UotYH2jc9Jtw3BhOTyG2BBWs7PfRTPeCpzaE54FkXkdZ2PoT6N/FpkLr0F/CcVFVGfJDKLjYooCmTI/4sWP76jSzUpiafHX2QHMVN72ApB9QIMLii0uCcrx+6ofwJ8qCdVsUP5DuVTbNtW4GOr/E4EtGWXzxNyWuKO2H8BCmnxjPmBq0jWaHiSW78SUyR3eAEuKzUSDMQjs/uBuKtfZDeCemD6wIh6a23BClt73QnOzmMIxThGSgYA0LL09Vdk27NpJpmgXRNZGk+8JhDwN1dX7JhvAFBNPXVjdpcyvTymCZDdHi0srw2msiuhoDsmAGaOGaOyenyUVmn7FgtkHby7m7uhjHJJqIngY28nopWGRQtgHDZl9gFobOzjLa8tsjOcvsVzCM27menVbm7HawWgljVRELlAArQ4mFtKw/fX0g8x0g+pyVIKslkuPKzig9u9DgRYfAQCUvH34TFAONQHvl2UEw2KCtZfxIsVeym0P0ZTuH5cr86g68JSec2TwrapkE/3NAHZ3nORwNvV1ZpuVa0FL5+EiIzvP3lB/HONtn+xiSntFqD/TiYaAW7z3iuknREdyRYW6kci8OghcU9egWy+FdzbkcSTK4eR3h8cxFn5xiINJnoWAA14861yXMnUdP8kcOy+dBZwZWciAI49CG00tk8WXZ7OE34CU3qhCulVDGN601Nq3zHMWkv/V7IonIv5QRXJAVdMSY2QtwgHF5ms26fv8QSiNBHIl2nNehXJzBhcrnczrJaFzmwjtl5z+K89PTEe4Id4Q7wh3hjvCi2E8BBgCWqHxeLugm3wAAAABJRU5ErkJggg=="
+    },
+    "2e34": function(t, n, e) {
+      "use strict";
+      e.d(n, "b", (function() {
+        return a
+      })), e.d(n, "c", (function() {
+        return o
+      })), e.d(n, "a", (function() {
+        return i
+      }));
+      var i = {
+          templatePage: e("d29d").default,
+          uniList: e("1e86").default,
+          uniListItem: e("fe74").default
+        },
+        a = function() {
+          var t = this,
+            n = t.$createElement,
+            e = t._self._c || n;
+          return e("template-page", {
+            staticClass: "container",
+            attrs: {
+              state: t.pageState,
+              retry: t.retry
+            },
+            scopedSlots: t._u([{
+              key: "loadSuccess",
+              fn: function() {
+                return [e("uni-list", {
+                  staticClass: "top_list"
+                }, [e("uni-list-item", {
+                  attrs: {
+                    thumb: "../../static/image/person/ID-icon.png",
+                    title: "我的账号",
+                    clickable: !0
+                  },
+                  on: {
+                    click: function(n) {
+                      arguments[0] = n = t.$handleEvent(n), t.toLoginPage.apply(void 0, arguments)
+                    }
+                  },
+                  scopedSlots: t._u([{
+                    key: "footer",
+                    fn: function() {
+                      return [e("v-uni-view", {
+                        staticClass: "list_right"
+                      }, [t.newStateGlobal == t.ESTATE.ES_CONNECTING ? e("v-uni-text", [t._v("登录中...")]) : t.newStateGlobal == t.ESTATE.ES_CONNECTED || t.newStateGlobal == t.ESTATE.ES_DISCONNECTING ? [t.isShowAccount ? e("v-uni-text", {
+                        staticClass: "mr10"
+                      }, [t._v(t._s(t.userAccount))]) : e("v-uni-text", {
+                        staticClass: "mr10"
+                      }, [t._v(t._s(t.getHideAccount(t.userAccount)))]), t.isShowAccount ? e("span", {
+                        staticClass: "item_icon password_eye_unfoucs",
+                        on: {
+                          click: function(n) {
+                            arguments[0] = n = t.$handleEvent(n), t.isShowAccount = !t.isShowAccount
+                          }
+                        }
+                      }) : e("span", {
+                        staticClass: "item_icon password_uneye_unfoucs",
+                        on: {
+                          click: function(n) {
+                            arguments[0] = n = t.$handleEvent(n), t.isShowAccount = !t.isShowAccount
+                          }
+                        }
+                      })] : t.newStateGlobal == t.ESTATE.ES_PRECONNECTFAIL || t.newStateGlobal == t.ESTATE.ES_PRECONNECTING ? e("v-uni-text", {
+                        staticClass: "unConnectEifi"
+                      }, [t._v("请连接校园网后再登录")]) : e("v-uni-text", [t._v("未登录")])], 2)]
+                    },
+                    proxy: !0
+                  }])
+                })], 1), e("uni-list", t._l(t.list, (function(n, i) {
+                  return n.isShow ? e("uni-list-item", {
+                    key: i,
+                    class: t.getClassByItem(n),
+                    attrs: {
+                      thumb: n.iconUrl,
+                      title: n.content,
+                      showArrow: "title" != n.type && "divider" != n.type,
+                      clickable: "title" != n.type && "divider" != n.type
+                    },
+                    on: {
+                      click: function(n) {
+                        arguments[0] = n = t.$handleEvent(n), t.handleClickItem(i)
+                      }
+                    },
+                    scopedSlots: t._u([n.clickType == t.CLICK.VERSION_UPDATE && t.isShowRedDot ? {
+                      key: "footer",
+                      fn: function() {
+                        return [e("v-uni-view", {
+                          staticClass: "redDot"
+                        })]
+                      },
+                      proxy: !0
+                    } : null], null, !0)
+                  }) : t._e()
+                })), 1), t.newStateGlobal == t.ESTATE.ES_CONNECTED ? e("uni-list", {
+                  staticClass: "bottom_list"
+                }, [e("uni-list-item", {
+                  attrs: {
+                    clickable: !0,
+                    title: "退出当前账号"
+                  },
+                  on: {
+                    click: function(n) {
+                      arguments[0] = n = t.$handleEvent(n), t.showLogoutPopup.apply(void 0, arguments)
+                    }
+                  }
+                })], 1) : t._e()]
+              },
+              proxy: !0
+            }])
+          })
+        },
+        o = []
+    },
+    3180: function(t, n, e) {
+      "use strict";
+      e.r(n);
+      var i = e("609c"),
+        a = e.n(i);
+      for (var o in i)["default"].indexOf(o) < 0 && function(t) {
+        e.d(n, t, (function() {
+          return i[t]
+        }))
+      }(o);
+      n["default"] = a.a
+    },
+    "3dab": function(t, n, e) {
+      "use strict";
+      var i = e("ea81"),
+        a = e.n(i);
+      a.a
+    },
+    "4ca8": function(t, n) {
+      t.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAYAAABXuSs3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MkY4QkMxN0U3NDUyMTFFOEIxQzI5QkZBOTk2QUUwQjciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MkY4QkMxN0Y3NDUyMTFFOEIxQzI5QkZBOTk2QUUwQjciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyRjhCQzE3Qzc0NTIxMUU4QjFDMjlCRkE5OTZBRTBCNyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyRjhCQzE3RDc0NTIxMUU4QjFDMjlCRkE5OTZBRTBCNyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pm1BOaIAAAS2SURBVHja7Jl5SBVRFMaf0kJRkbTZvhdhRYtl2UK2U1m0SX+0IIhFCwQV9aLlj1ZaaYPUghICC147tGcGaYtpElG2Q2CZFa1aUdl35Bu4TbPcKVuEd+BjrjPvzvzm3nPPOXcMKS0t9VVEC/VVUAuCB8GD4P+pVUpOTv6nAImJiT/8DZ56OLTB+awKM+KETofOoN3bccTL6ZkRUEeoHdQUagBV47ViqAh6At2FbkK3HKAjeP3BnwIfDo2GBkNtPfa9B52DDnJ0zdAD4SrPnW4QkpSU5OWBVaFZUALUwXStiKOUD72F3kNST9SEakHtodZQPVO/u7wergvtdcRnQn6oiXLuInQCugDdgD5qvHgXgYOGQgPoXmJfoFQdaN0R7w7tgKL491dxSSgFyrXpIzAt2X7EUTWbjHwWZ0FmJoTnr0Iz8AK5vxNV5kLZCvRuAs20gJYFuQZ6SHc5SeXz3GqovgKdTmhxj64cDLGeUA78ft6vgu+FNrOdz2lNYHQw2zToPrRIGeliysdzfq6BWRYLMQ+azmfcYZ8NgE/1Cn4emsp2Kh+S4TAre6AaXKB+jmA4Je0l0Cv+Zrtd9EA7g9f28NQUwJ/XBZfOMWz7OZpfbaAHKbNyjGFxLRfqO0raq6BejDSGycs8t8ik36B4NBfyVAzgM9zAT0H9jXsQwsnSeMxiTH9j8zvx6UMc8RKe2+lSCqwjg1h/wJ+0A9/BECU2nVHDySZBddke6/A7c3KJUhZznAt8ClnEhgF+mxl8IiOF2AplhbuBix2ACjWhBzLlB3g9TqMISyaT2GzAjzPAGylTfhRappmQOvF4XBM6RvFpo09nzQpymdJnP+AbCvgmvsAHaIwmdBWoDtuFmtBFyvUCHsMAEaoJH8vwKtl+YygLHQNmiib4F2WR1fIIXQbM40dmTZ2SdyoZxQKh9FGJm5UZs3to3Ocbs6FYpEdosb48PsRIlmpARzEhyminoE/AmKZ4BeQCa2o3O6NkTS/QYpN5PKsB3YwJsawcTuSWSfUvSbefoerQNVMVaGVGHA5nEtKFlpBWm+0UF+jGOFwh0ycy/hTHnyhTKDH2ukXNrdozFlVG2teBniMhje2VvIcdtNTvORyYMvfCYBfYZU4Z6Wi2pZLLg2Id4DcrhZSPFWOYxe/a00e3Ku641AF6JJ9tVJPRgM52q1WyWIO/4II9ylrDLuRVZ01i+K5UkpcgKfR3QZms+Iyi7YhSC1lBr2LMrsrCLNJqx2+3A8phgglwBhZDI6D53CtaLcTx0AKoFftEm+4pZe96u6wMYPHfjVA3npIXngDop7+6A1rDOtunVIEdWWObfVp2MUO4GWjBc4+5qzltc/8+XCMT1GcCePHv7jn9nN71XLyGz0um3afU4T4mk9MOkIY1h0ZxlmJMJfVCQF8pjz2n6tM5NmEym2HrNkf4NfSSiSqMVWRzul+kKWmJXYa2ADhN+xOcB+h0Qot7LKfPx/KaFYybyeI/LEUTgM967KsFbpcRA/xa1Y+7m54c1VaMNKoVc7f/mPkhk582SszfDssL3C2Nl2j69F//zNyW0cEtI/79z8wu1zO5nbv3P0GXRZXgvwuD4EHwIHgQXOy7AAMA+nJ6EymPB4YAAAAASUVORK5CYII="
+    },
+    "609c": function(t, n, e) {
+      "use strict";
+      e("7a82");
+      var i = e("4ea4").default;
+      Object.defineProperty(n, "__esModule", {
+        value: !0
+      }), n.default = void 0;
+      var a = i(e("5530"));
+      e("99af"), e("fb6a"), e("f4b3"), e("e9c4");
+      var o = e("1698"),
+        c = e("49f6"),
+        l = e("8f4d"),
+        s = e("c685"),
+        u = (e("1983"), i(e("4bea"))),
+        r = (i(e("4360")), e("26cb"));
+      getApp().globalData, uni.requireNativePlugin("globalEvent"), n.default = {
+        data: function() {
+          return {
+            pageState: "loadSuccess",
+            autoAgain: !0,
+            isShowAccount: !1,
+            ESTATE: c.$ESTATE,
+            userAccount: "",
+            isNowPage: !1,
+            CLICK: c.$CLICK,
+            list: [{
+              isShow: !1,
+              iconUrl: "../../static/image/person/guide-icon.png",
+              content: "防断网设置指引",
+              appPage: !1,
+              clickType: c.$CLICK.BROKEN_NETWORK
+            }, {
+              isShow: !0,
+              iconUrl: "../../static/image/person/help-icon.png",
+              appPage: !1,
+              url: "static/".concat(getApp().globalData.province).concat("android" == getApp().globalData.province ? "" : "/iOS", "/help.html"),
+              content: "帮助指引",
+              clickType: c.$CLICK.HELPURL
+            }, {
+              isShow: !0,
+              iconUrl: "../../static/image/person/update-icon.png",
+              appPage: !1,
+              content: "版本更新",
+              clickType: c.$CLICK.VERSION_UPDATE
+            }, {
+              isShow: !1,
+              iconUrl: "../../static/image/person/repair-icon.png",
+              appPage: !1,
+              content: "报障热线",
+              clickType: c.$CLICK.REPORT_PHONE
+            }, {
+              isShow: !0,
+              content: "隐私",
+              type: "title"
+            }, {
+              isShow: !0,
+              iconUrl: "../../static/image/person/privacy-icon.png",
+              appPage: !0,
+              content: "个人信息与权限",
+              clickType: c.$CLICK.PRIVACY_SETTING
+            }, {
+              isShow: !0,
+              iconUrl: "../../static/image/person/slef.png",
+              appPage: !1,
+              url: "static/personalInfo.html",
+              content: "个人信息收集清单",
+              clickType: c.$CLICK.SELF_MESSAGE_COOLECT
+            }, {
+              isShow: !0,
+              iconUrl: "../../static/image/person/tshare.png",
+              appPage: !1,
+              content: "第三方信息数据共享",
+              clickType: c.$CLICK.OTHER_DATA_SHARE
+            }, {
+              isShow: !0,
+              content: "",
+              type: "divider"
+            }, {
+              isShow: !0,
+              iconUrl: "../../static/image/person/about-icon.png",
+              appPage: !0,
+              content: "关于",
+              clickType: c.$CLICK.ABOUT_MESSAGE
+            }]
+          }
+        },
+        onLoad: function() {
+          var t = this;
+          this.getList(), plus.globalEvent.addEventListener("cndatacomEvent", (function(n) {
+            n.type == c.$ETYPE.ET_PORTAL && (t.getList(), n.newState == c.$ESTATE.ES_DISCONNECTED && t.isNowPage && (t.isNowPage = !1, uni.navigateTo({
+              url: "/pages/login/login"
+            })))
+          }))
+        },
+        onBackPress: function(t) {
+          if ("backbutton" == t.from) return uni.$emit("handleListen", {
+            type: "tabbarEvent"
+          }), !0
+        },
+        onShow: function() {
+          if (1 == getApp().globalData.isVisitorMode ? this.list[5].isShow = !1 : this.list[5].isShow = !0, this.newStateGlobal == c.$ESTATE.ES_CONNECTED) {
+            var t = this;
+            this.userAccount = getApp().globalData.userAccount, "" != this.userAccount && null != this.userAccount || o.PluginApi.coolMethod("getMulCacheData", ["DialAccount"], (function(n) {
+              var e = n["DialAccount"];
+              s.$log.logInfoJsonString("dialAccount  --\x3e" + e), t.userAccount = e, getApp().globalData.userAccount = e
+            }))
+          }
+        },
+        computed: (0, a.default)({}, (0, r.mapState)(["newStateGlobal", "isShowRedDot"])),
+        created: function() {
+          document.addEventListener("backbutton", this.handleBackButtonEvent, !1)
+        },
+        destroyed: function() {
+          document.removeEventListener("backbutton", this.handleBackButtonEvent, !1)
+        },
+        methods: {
+          handleBackButtonEvent: function() {
+            var t = getCurrentPages(),
+              n = t[t.length - 1].route;
+            n == this.$mp.page.route && uni.$emit("handleListen", {
+              type: "tabbarEvent"
+            })
+          },
+          retry: function() {},
+          getList: function() {
+            var t = this;
+            s.$funCtrl.getMulFunCfg(s.$funKey.FUN_PREVENTBROKENNETWORK, s.$funKey.FUN_FEEDBACK_AND_ADVICE, s.$funKey.FUN_REPORT_PHONE, (function(n) {
+              var e = "";
+              e = n[s.$funKey.FUN_PREVENTBROKENNETWORK], void 0 != e && 1 == e.enable && e.url && t.newStateGlobal != c.$ESTATE.ES_PRECONNECTFAIL && t.newStateGlobal != c.$ESTATE.ES_PRECONNECTING ? (t.list[0].isShow = !0, t.list[0]["url"] = e.url) : t.list[0].isShow = !1, e = n[s.$funKey.FUN_REPORT_PHONE], void 0 != e && 1 == e.enable && e.url && t.newStateGlobal != c.$ESTATE.ES_PRECONNECTFAIL && t.newStateGlobal != c.$ESTATE.ES_PRECONNECTING ? (t.list[3].isShow = !0, t.list[3]["url"] = e.url) : t.list[3].isShow = !1
+            }))
+          },
+          toLoginPage: function() {
+            1 != getApp().globalData.isVisitorMode ? this.newStateGlobal == c.$ESTATE.ES_PRECONNECTED && uni.navigateTo({
+              url: "/pages/login/login"
+            }) : uni.$emit("handleListen", {
+              type: "visitorModeEvent"
+            })
+          },
+          showLogoutPopup: function() {
+            var t = this;
+            uni.showModal({
+              content: "确定要退出当前账号？",
+              success: function(n) {
+                n.confirm ? (uni.showLoading({
+                  title: "加载中",
+                  mask: !0
+                }), t.isNowPage = !0, o.PluginApi.coolMethod("onTerm", []), o.PluginApi.coolMethod("setCacheData", ["DialPassword", ""], (function(t) {
+                  console.log("setCacheData>" + t)
+                }))) : n.cancel && console.log("用户点击取消")
+              }
+            })
+          },
+          getClassByItem: function(t) {
+            return "title" == t.type ? "list-title" : "divider" == t.type ? "list-divider" : ""
+          },
+          handleClickItem: function(t) {
+            var n = this.list[t];
+            "title" != n.type && (s.$log.logInfoString(n.content + "--\x3e" + n.url), n.clickType == c.$CLICK.ABOUT_MESSAGE ? this.handleAbout() : n.clickType == c.$CLICK.VERSION_UPDATE ? this.handleVersionUpdate() : n.clickType == c.$CLICK.REPORT_PHONE ? this.handleReportPhone() : n.clickType == c.$CLICK.PRIVACY_SETTING ? this.handlePrivacySet() : n.clickType == c.$CLICK.SELF_MESSAGE_COOLECT ? this.handleSelfMessageCollect() : n.clickType == c.$CLICK.OTHER_DATA_SHARE ? this.handleOtherShare() : n.url && (s.$webView.open(n.content, n.url, !0), uni.$emit("handleListen", {
+              type: "clickModule",
+              data: {
+                type: 3,
+                moduleId: n.clickType
+              }
+            })))
+          },
+          handleVersionUpdate: function() {
+            uni.showLoading({
+              title: "加载中...",
+              mask: !0
+            }), (0, u.default)(!0)
+          },
+          handleReportPhone: function() {
+            uni.showLoading({
+              title: "加载中",
+              mask: !0
+            }), s.$funCtrl.getMulFunCfg(s.$funKey.FUN_REPORT_PHONE, (function(t) {
+              var n = t[s.$funKey.FUN_REPORT_PHONE];
+              n && 1 == n.enable && n.url && o.PluginApi.coolMethod("getMulCacheData", ["schoolID", "area", "domain", "DialAccount", "wlanipname", "ostype"], (function(t) {
+                var e = "",
+                  i = t.wlanipname,
+                  a = t.schoolID ? t.schoolID : 1211;
+                e += "cid=" + a + "&area=" + t.area + "&domain=" + t.domain + "&account=" + t.DialAccount;
+                var c = "android" == getApp().globalData.phoneType ? "android" : "ios";
+                e += "&ostype=" + c + "&" + i;
+                var u = n.url + "?" + e;
+                s.$log.logInfoString("showRepairView url ->" + u), l.httpRequest.get({
+                  url: u
+                }).then((function(t) {
+                  var n = t.data;
+                  s.$log.logInfoString("showRepairView 报障热线 ->" + JSON.stringify(n)), uni.hideLoading(), 0 == n.rescode && void 0 != n.result.length && n.result.length > 0 ? o.PluginApi.coolMethod("onCall", [n.result[0]]) : uni.showModal({
+                    content: " 所在地区暂未提供报障热线，详情请咨询校园营业厅！",
+                    contentAlign: "left",
+                    showCancel: !1,
+                    success: function(t) {}
+                  })
+                })).catch((function(t) {
+                  uni.hideLoading(), uni.showModal({
+                    content: "网络异常，请稍候重试！",
+                    showCancel: !1,
+                    success: function(t) {}
+                  })
+                }))
+              }))
+            }))
+          },
+          handlePrivacySet: function() {
+            uni.navigateTo({
+              url: "/pages/privacySet/privacySet"
+            })
+          },
+          handleSelfMessageCollect: function() {
+            uni.navigateTo({
+              url: "/pages/personMessage/personMessage"
+            })
+          },
+          handleOtherShare: function() {
+            var t = getApp().globalData.province;
+            s.$webView.open("第三方信息数据共享", "static/".concat(t, "/sdk.html"), !0)
+          },
+          handleAbout: function() {
+            uni.navigateTo({
+              url: "/pages/aboutMessage/aboutMessage"
+            })
+          },
+          getHideAccount: function(t) {
+            return t.length <= 4 ? "****" : t.slice(0, -4) + "****"
+          }
+        }
+      }
+    },
+    "651e": function(t, n, e) {
+      "use strict";
+      e.d(n, "b", (function() {
+        return i
+      })), e.d(n, "c", (function() {
+        return a
+      })), e.d(n, "a", (function() {}));
+      var i = function() {
+          var t = this,
+            n = t.$createElement,
+            e = t._self._c || n;
+          return e("v-uni-view", {
+            staticClass: "wrapper"
+          }, [t._t("loadSuccess"), "loading" == t.state ? e("v-uni-view", {
+            staticClass: "loading_info"
+          }, [t._v("正在加载中...")]) : "loadFail" == t.state ? e("v-uni-view", {
+            staticClass: "loadFail_info"
+          }, [e("v-uni-view", {
+            staticClass: "info"
+          }, [e("v-uni-view", [t._v(t._s(t.loadFaliMessage))]), e("v-uni-button", {
+            on: {
+              click: function(n) {
+                arguments[0] = n = t.$handleEvent(n), t.retry.apply(void 0, arguments)
+              }
+            }
+          }, [t._v("请重试")])], 1)], 1) : t._e()], 2)
+        },
+        a = []
+    },
+    "6ea3": function(t, n, e) {
+      "use strict";
+      e("7a82"), Object.defineProperty(n, "__esModule", {
+        value: !0
+      }), n.default = void 0;
+      n.default = {
+        name: "template-page",
+        props: {
+          title: {
+            type: String,
+            default: ""
+          },
+          color: {
+            type: String,
+            default: ""
+          },
+          state: {
+            type: String,
+            default: "loading"
+          },
+          retry: {
+            type: Function,
+            default: function() {}
+          },
+          loadFaliMessage: {
+            type: String,
+            default: ""
+          }
+        },
+        data: function() {
+          return {}
+        },
+        onLoad: function() {
+          console.log("刷新了")
+        },
+        methods: {}
+      }
+    },
+    "7c99": function(t, n, e) {
+      var i = e("4bad");
+      n = i(!1), n.push([t.i, '@charset "UTF-8";\n/**\n * 这里是uni-app内置的常用样式变量\n *\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\n *\n */\n/**\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\n *\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\n */\n/* 颜色变量 */\n/* 行为相关颜色 */\n/* 文字基本颜色 */\n/* 背景颜色 */\n/* 边框颜色 */\n/* 尺寸变量 */\n/* 文字尺寸 */\n/* 图片尺寸 */\n/* Border Radius */\n/* 水平间距 */\n/* 垂直间距 */\n/* 透明度 */\n/* 文章场景相关 */\n/*绝对定位-左上角*/\n/*绝对定位-左下角*/\n/*绝对定位-右上角*/\n/*绝对定位-右下角*/\n/*绝对定位-垂直水平居中*/\n/*绝对定位-底部水平居中*/\n/*绝对定位-顶部水平居中*/\n/*固定定位 元素居中*/\n/*粘性定位*/\n/*固定定位*/\n/*-------flexible box--------*/\n/*水平排列*/\n/*水平排列允许换行*/\n/*水平排列 上下居中*/\n/*左右顶头*/\n/*左右顶头 上下居中*/\n/*水平垂直居中*/\n/*水平居中*/\n/*列居中*/\n/*上下顶边*/\n/*-----字号------*/\n/*文字超出省略号*/\n/*背景*/\n/*背景图*/\n/*边框*/\n/*底部边框*/\n/*顶部边框*/\n/*左侧边框*/\n/*右侧边框*/\n/*四边边框*/\n/*过渡动画*/[data-v-4aa361d3] .uni-nav-bar-text{font-size:%?36?%}.wrapper[data-v-4aa361d3]{min-height:100vh;position:relative}.loading_info[data-v-4aa361d3],\n.loadFail_info[data-v-4aa361d3]{position:absolute;top:0;font-size:%?36?%;width:100vw;height:100vh;background-color:#fff;display:flex;justify-content:center;align-items:center;color:#000;z-index:99}.loading_info .info[data-v-4aa361d3],\n.loadFail_info .info[data-v-4aa361d3]{text-align:center}.loading_info .info uni-button[data-v-4aa361d3],\n.loadFail_info .info uni-button[data-v-4aa361d3]{margin-top:%?10?%;width:%?200?%}.ddddd[data-v-4aa361d3]{background-color:#000}', ""]), t.exports = n
+    },
+    "80e9": function(t, n, e) {
+      var i = e("4bad"),
+        a = e("ffbf"),
+        o = e("2a22"),
+        c = e("4ca8");
+      n = i(!1);
+      var l = a(o),
+        s = a(c);
+      n.push([t.i, '@charset "UTF-8";\n/**\n * 这里是uni-app内置的常用样式变量\n *\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\n *\n */\n/**\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\n *\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\n */\n/* 颜色变量 */\n/* 行为相关颜色 */\n/* 文字基本颜色 */\n/* 背景颜色 */\n/* 边框颜色 */\n/* 尺寸变量 */\n/* 文字尺寸 */\n/* 图片尺寸 */\n/* Border Radius */\n/* 水平间距 */\n/* 垂直间距 */\n/* 透明度 */\n/* 文章场景相关 */\n/*绝对定位-左上角*/\n/*绝对定位-左下角*/\n/*绝对定位-右上角*/\n/*绝对定位-右下角*/\n/*绝对定位-垂直水平居中*/\n/*绝对定位-底部水平居中*/\n/*绝对定位-顶部水平居中*/\n/*固定定位 元素居中*/\n/*粘性定位*/\n/*固定定位*/\n/*-------flexible box--------*/\n/*水平排列*/\n/*水平排列允许换行*/\n/*水平排列 上下居中*/\n/*左右顶头*/\n/*左右顶头 上下居中*/\n/*水平垂直居中*/\n/*水平居中*/\n/*列居中*/\n/*上下顶边*/\n/*-----字号------*/\n/*文字超出省略号*/\n/*背景*/\n/*背景图*/\n/*边框*/\n/*底部边框*/\n/*顶部边框*/\n/*左侧边框*/\n/*右侧边框*/\n/*四边边框*/\n/*过渡动画*/[data-v-1ec9f258] .uni-list-item{border-bottom:%?3?% solid #f1f1f1}[data-v-1ec9f258] .uni-list--border:after{background-color:initial}[data-v-1ec9f258] .uni-list-item__icon{margin-right:0}[data-v-1ec9f258] .uni-list-item__content-title{font-size:%?32?%}[data-v-1ec9f258] .uniui-arrowright{font-size:%?36?%!important}.special_item[data-v-1ec9f258]  .uni-list-item__container{align-items:flex-start}[data-v-1ec9f258] .uni-list-item__extra-text{color:#469af1}.container[data-v-1ec9f258]{width:100vw;overflow-x:hidden;background-color:#f1f1f1}.container .redDot[data-v-1ec9f258]{width:%?15?%;height:%?15?%;border-radius:50%;background-color:red;right:%?10?%;position:relative;top:%?15?%}.container .top_list[data-v-1ec9f258]{margin:%?20?% 0}.container .top_list .list_right[data-v-1ec9f258]{color:#469af1;display:flex;align-items:center;max-width:%?420?%}.container .top_list .list_right uni-text[data-v-1ec9f258]{width:100%;text-align:right;font-size:%?32?%;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical}.container .top_list .unConnectEifi[data-v-1ec9f258]{color:#bbb}.container .bottom_list[data-v-1ec9f258]{margin-top:%?20?%}.container .bottom_list[data-v-1ec9f258]  .uni-list-item__content-title{text-align:center}[data-v-1ec9f258] .uni-list-item{min-height:3.5rem!important}.wrapper[data-v-1ec9f258]{min-height:89vh!important}[data-v-1ec9f258] .uni-list--base{width:1.5rem!important;height:1.5rem!important}.list-title[data-v-1ec9f258]{min-height:1.5rem!important;padding-left:%?5?%;font-weight:400;font-size:%?28?%;background-color:#f1f1f1}.list-divider[data-v-1ec9f258]{background-color:#f1f1f1;min-height:%?20?%!important}.item_icon[data-v-1ec9f258]{width:%?50?%;height:%?50?%;background-size:100% 100%}.mr10[data-v-1ec9f258]{margin-right:%?20?%}.password_eye_unfoucs[data-v-1ec9f258]{background-image:url(' + l + ")}.password_uneye_unfoucs[data-v-1ec9f258]{background-image:url(" + s + ")}", ""]), t.exports = n
+    },
+    c098: function(t, n, e) {
+      "use strict";
+      e.r(n);
+      var i = e("2e34"),
+        a = e("3180");
+      for (var o in a)["default"].indexOf(o) < 0 && function(t) {
+        e.d(n, t, (function() {
+          return a[t]
+        }))
+      }(o);
+      e("eb91");
+      var c = e("f0c5"),
+        l = Object(c["a"])(a["default"], i["b"], i["c"], !1, null, "1ec9f258", null, !1, i["a"], void 0);
+      n["default"] = l.exports
+    },
+    c809: function(t, n, e) {
+      var i = e("80e9");
+      i.__esModule && (i = i.default), "string" === typeof i && (i = [
+        [t.i, i, ""]
+      ]), i.locals && (t.exports = i.locals);
+      var a = e("4f06").default;
+      a("079fdd1f", i, !0, {
+        sourceMap: !1,
+        shadowMode: !1
+      })
+    },
+    d29d: function(t, n, e) {
+      "use strict";
+      e.r(n);
+      var i = e("651e"),
+        a = e("20f7");
+      for (var o in a)["default"].indexOf(o) < 0 && function(t) {
+        e.d(n, t, (function() {
+          return a[t]
+        }))
+      }(o);
+      e("3dab");
+      var c = e("f0c5"),
+        l = Object(c["a"])(a["default"], i["b"], i["c"], !1, null, "4aa361d3", null, !1, i["a"], void 0);
+      n["default"] = l.exports
+    },
+    ea81: function(t, n, e) {
+      var i = e("7c99");
+      i.__esModule && (i = i.default), "string" === typeof i && (i = [
+        [t.i, i, ""]
+      ]), i.locals && (t.exports = i.locals);
+      var a = e("4f06").default;
+      a("4326e34c", i, !0, {
+        sourceMap: !1,
+        shadowMode: !1
+      })
+    },
+    eb91: function(t, n, e) {
+      "use strict";
+      var i = e("c809"),
+        a = e.n(i);
+      a.a
+    }
+  }
+]);

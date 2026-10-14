@@ -1,0 +1,479 @@
+.class public Li4/e;
+.super Ljava/lang/Object;
+.source "Platform.java"
+
+
+# static fields
+.field public static final a:Li4/e;
+
+.field public static final b:Ljava/util/logging/Logger;
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 3
+
+    .line 1
+    invoke-static {}, Li4/e;->g()Li4/e;
+
+    move-result-object v0
+
+    sput-object v0, Li4/e;->a:Li4/e;
+
+    .line 2
+    const-class v0, Lc4/v;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/logging/Logger;->getLogger(Ljava/lang/String;)Ljava/util/logging/Logger;
+
+    move-result-object v0
+
+    sput-object v0, Li4/e;->b:Ljava/util/logging/Logger;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static b(Ljava/util/List;)Ljava/util/List;
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lc4/w;",
+            ">;)",
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-interface {p0}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    .line 2
+    invoke-interface {p0}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_1
+
+    .line 3
+    invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lc4/w;
+
+    .line 4
+    sget-object v4, Lc4/w;->b:Lc4/w;
+
+    if-ne v3, v4, :cond_0
+
+    goto :goto_1
+
+    .line 5
+    :cond_0
+    invoke-virtual {v3}, Lc4/w;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :goto_1
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-object v0
+.end method
+
+.method public static d(Ljava/util/List;)[B
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lc4/w;",
+            ">;)[B"
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Lokio/Buffer;
+
+    invoke-direct {v0}, Lokio/Buffer;-><init>()V
+
+    .line 2
+    invoke-interface {p0}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_1
+
+    .line 3
+    invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lc4/w;
+
+    .line 4
+    sget-object v4, Lc4/w;->b:Lc4/w;
+
+    if-ne v3, v4, :cond_0
+
+    goto :goto_1
+
+    .line 5
+    :cond_0
+    invoke-virtual {v3}, Lc4/w;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/String;->length()I
+
+    move-result v4
+
+    invoke-virtual {v0, v4}, Lokio/Buffer;->writeByte(I)Lokio/Buffer;
+
+    .line 6
+    invoke-virtual {v3}, Lc4/w;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Lokio/Buffer;->writeUtf8(Ljava/lang/String;)Lokio/Buffer;
+
+    :goto_1
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    .line 7
+    :cond_1
+    invoke-virtual {v0}, Lokio/Buffer;->readByteArray()[B
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static g()Li4/e;
+    .locals 2
+
+    .line 1
+    invoke-static {}, Li4/a;->n()Li4/e;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    return-object v0
+
+    .line 2
+    :cond_0
+    invoke-static {}, Li4/b;->n()Li4/b;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    return-object v0
+
+    .line 3
+    :cond_1
+    invoke-static {}, Li4/c;->n()Li4/e;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    return-object v0
+
+    .line 4
+    :cond_2
+    new-instance v0, Li4/e;
+
+    invoke-direct {v0}, Li4/e;-><init>()V
+
+    return-object v0
+.end method
+
+.method public static h()Li4/e;
+    .locals 1
+
+    sget-object v0, Li4/e;->a:Li4/e;
+
+    return-object v0
+.end method
+
+.method public static l(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/lang/Object;",
+            "Ljava/lang/Class<",
+            "TT;>;",
+            "Ljava/lang/String;",
+            ")TT;"
+        }
+    .end annotation
+
+    .line 1
+    const-class v0, Ljava/lang/Object;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    :goto_0
+    const/4 v2, 0x0
+
+    if-eq v1, v0, :cond_2
+
+    .line 2
+    :try_start_0
+    invoke-virtual {v1, p2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v3
+
+    const/4 v4, 0x1
+
+    .line 3
+    invoke-virtual {v3, v4}, Ljava/lang/reflect/Field;->setAccessible(Z)V
+
+    .line 4
+    invoke-virtual {v3, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_1
+
+    .line 5
+    invoke-virtual {p1, v3}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_0
+
+    goto :goto_1
+
+    .line 6
+    :cond_0
+    invoke-virtual {p1, v3}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p0
+
+    :cond_1
+    :goto_1
+    return-object v2
+
+    .line 7
+    :catch_0
+    new-instance p0, Ljava/lang/AssertionError;
+
+    invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
+
+    throw p0
+
+    .line 8
+    :catch_1
+    invoke-virtual {v1}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    goto :goto_0
+
+    :cond_2
+    const-string v1, "delegate"
+
+    .line 9
+    invoke-virtual {p2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_3
+
+    .line 10
+    invoke-static {p0, v0, v1}, Li4/e;->l(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_3
+
+    .line 11
+    invoke-static {p0, p1, p2}, Li4/e;->l(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_3
+    return-object v2
+.end method
+
+
+# virtual methods
+.method public a(Ljavax/net/ssl/SSLSocket;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public c(Ljavax/net/ssl/X509TrustManager;)Lj4/b;
+    .locals 1
+
+    new-instance v0, Lj4/a;
+
+    invoke-static {p1}, Lj4/e;->b(Ljavax/net/ssl/X509TrustManager;)Lj4/e;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Lj4/a;-><init>(Lj4/e;)V
+
+    return-object v0
+.end method
+
+.method public e(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljavax/net/ssl/SSLSocket;",
+            "Ljava/lang/String;",
+            "Ljava/util/List<",
+            "Lc4/w;",
+            ">;)V"
+        }
+    .end annotation
+
+    return-void
+.end method
+
+.method public f(Ljava/net/Socket;Ljava/net/InetSocketAddress;I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    invoke-virtual {p1, p2, p3}, Ljava/net/Socket;->connect(Ljava/net/SocketAddress;I)V
+
+    return-void
+.end method
+
+.method public i(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public j(Ljava/lang/String;)Z
+    .locals 0
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public k(ILjava/lang/String;Ljava/lang/Throwable;)V
+    .locals 1
+
+    const/4 v0, 0x5
+
+    if-ne p1, v0, :cond_0
+
+    .line 1
+    sget-object p1, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p1, Ljava/util/logging/Level;->INFO:Ljava/util/logging/Level;
+
+    .line 2
+    :goto_0
+    sget-object v0, Li4/e;->b:Ljava/util/logging/Logger;
+
+    invoke-virtual {v0, p1, p2, p3}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public m(Ljavax/net/ssl/SSLSocketFactory;)Ljavax/net/ssl/X509TrustManager;
+    .locals 3
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    const-string v1, "sun.security.ssl.SSLContextImpl"
+
+    .line 1
+    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v1
+
+    const-string v2, "context"
+
+    .line 2
+    invoke-static {p1, v1, v2}, Li4/e;->l(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    return-object v0
+
+    .line 3
+    :cond_0
+    const-class v1, Ljavax/net/ssl/X509TrustManager;
+
+    const-string v2, "trustManager"
+
+    invoke-static {p1, v1, v2}, Li4/e;->l(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljavax/net/ssl/X509TrustManager;
+    :try_end_0
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p1
+
+    :catch_0
+    return-object v0
+.end method

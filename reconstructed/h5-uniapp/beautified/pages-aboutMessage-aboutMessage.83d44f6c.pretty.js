@@ -1,0 +1,372 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([
+  ["pages-aboutMessage-aboutMessage"], {
+    "052d": function(n, t, e) {
+      "use strict";
+      e.r(t);
+      var a = e("0727"),
+        i = e.n(a);
+      for (var o in a)["default"].indexOf(o) < 0 && function(n) {
+        e.d(t, n, (function() {
+          return a[n]
+        }))
+      }(o);
+      t["default"] = i.a
+    },
+    "0727": function(n, t, e) {
+      "use strict";
+      e("7a82"), Object.defineProperty(t, "__esModule", {
+        value: !0
+      }), t.default = void 0, e("99af"), e("f4b3"), e("e9c4");
+      var a = e("c685"),
+        i = e("1698");
+      e("49f6"), t.default = {
+        data: function() {
+          return {
+            pageState: "loadSuccess",
+            appName: "",
+            copyright: "",
+            isAndroid: !0,
+            versionName: "",
+            isShowVisit: !0,
+            isVisitorMode: !1
+          }
+        },
+        onShow: function() {
+          this.isVisitorMode = getApp().globalData.isVisitorMode
+        },
+        onLoad: function() {
+          var n = this;
+          "android" != getApp().globalData.phoneType && a.$funCtrl.getMulFunCfg(a.$funKey.FUN_VISIBLE_TO_TOURISTS, (function(t) {
+            var e = t[a.$funKey.FUN_VISIBLE_TO_TOURISTS];
+            e && 0 == e.enable && (n.isShowVisit = !1)
+          })), i.PluginApi.coolMethod("getAppInfo", [], (function(t) {
+            console.log("getAppInfo->" + JSON.stringify(t)), n.appName = t.appName, n.versionName = t.versionName, n.copyright = t.copyright, n.isAndroid = "android" == t.phoneType
+          }))
+        },
+        onNavigationBarButtonTap: function() {
+          i.PluginApi.coolMethod("getMulCacheData", ["ShareLogKey"], (function(n) {
+            if (1 == n.ShareLogKey) i.PluginApi.coolMethod("onShareLog", []);
+            else {
+              "欢迎使用广东校园提供的日志分享服务。\n",
+              "该服务支持分享本APP产生的错误日志信息给本校网络维护人员分析使用。",
+              "该功能可能会涉及到个人信息存储，（宽带账号、IP地址、Mac地址（随机化处理后的MAC地址）、WIFI信息、设备型号、设备系统版本、应用安装列表），用于故障诊断和分析。",
+              "我们仅会将该信息用于上述用途，如果您不需要使用日志分享功能，则无需提供对应信息。";
+              var t = {
+                titleText: "温馨提示",
+                cancelText: "不同意",
+                confirmText: "同意",
+                allowHtml: !1,
+                content: "欢迎使用广东校园提供的日志分享服务。\n该服务支持分享本APP产生的错误日志信息给本校网络维护人员分析使用。该功能可能会涉及到个人信息存储，（宽带账号、IP地址、Mac地址（随机化处理后的MAC地址）、WIFI信息、设备型号、设备系统版本、应用安装列表），用于故障诊断和分析。我们仅会将该信息用于上述用途，如果您不需要使用日志分享功能，则无需提供对应信息。",
+                checkboxText: "继续使用即表示您已阅读并同意我们将您提供的信息仅用于上述用途",
+                toastText: "若需要继续分享日志文件，请勾选用途提示信息"
+              };i.PluginApi.coolMethod("showCheckBoxModal", [JSON.stringify(t)], (function(n) {
+                n && (i.PluginApi.coolMethod("onShareLog", []), i.PluginApi.coolMethod("setCacheData", ["ShareLogKey", "1"]))
+              }))
+            }
+          }))
+        },
+        created: function() {
+          document.addEventListener("backbutton", this.handleBackButtonEvent, !1)
+        },
+        destroyed: function() {
+          document.removeEventListener("backbutton", this.handleBackButtonEvent, !1)
+        },
+        methods: {
+          handleBackButtonEvent: function() {
+            var n = getCurrentPages(),
+              t = n[n.length - 1].route;
+            t == this.$mp.page.route && uni.navigateBack()
+          },
+          retry: function() {
+            console.log("请重试")
+          },
+          basePrivacySet: function() {
+            var n = getApp().globalData.province;
+            a.$webView.open("基本业务功能隐私政策", "static/".concat(n, "/basePrivacy.html"), !0)
+          },
+          fullPrivacySet: function() {
+            var n = getApp().globalData.province;
+            a.$webView.open("隐私政策（摘要）", "static/".concat(n).concat("android" == getApp().globalData.phoneType ? "" : "/iOS", "/abstractPrivacy.html"), !0)
+          },
+          revokePrivacy: function() {
+            this.$store.state.newStateGlobal;
+            uni.showModal({
+              cancelText: "否",
+              confirmText: "是",
+              title: "撤回隐私政策",
+              closeOnBack: !0,
+              content: "请注意，您撤回隐私政策同意后，将无法使用广东校园功能，需重新授权同意隐私政策后，方可重新使用广东校园各项功能。",
+              success: function(n) {
+                n.confirm ? "android" == getApp().globalData.phoneType ? i.PluginApi.coolMethod("revokePrivacy", []) : uni.switchTab({
+                  url: "/pages/index/index",
+                  success: function() {
+                    i.PluginApi.coolMethod("revokePrivacy", [])
+                  }
+                }) : n.cancel
+              }
+            })
+          },
+          improveSet: function() {
+            a.$webView.open("用户体验改进计划", "static/".concat(getApp().globalData.province).concat("android" == getApp().globalData.phoneType ? "" : "/iOS", "/experience.html"), !0)
+          },
+          goLogin: function() {
+            uni.navigateTo({
+              url: "/pages/login/login"
+            })
+          }
+        }
+      }
+    },
+    "0fb5": function(n, t, e) {
+      n.exports = e.p + "static/img/ios-logo.6f616997.png"
+    },
+    "20f7": function(n, t, e) {
+      "use strict";
+      e.r(t);
+      var a = e("6ea3"),
+        i = e.n(a);
+      for (var o in a)["default"].indexOf(o) < 0 && function(n) {
+        e.d(t, n, (function() {
+          return a[n]
+        }))
+      }(o);
+      t["default"] = i.a
+    },
+    "3dab": function(n, t, e) {
+      "use strict";
+      var a = e("ea81"),
+        i = e.n(a);
+      i.a
+    },
+    "415e": function(n, t, e) {
+      "use strict";
+      e.r(t);
+      var a = e("6757"),
+        i = e("052d");
+      for (var o in i)["default"].indexOf(o) < 0 && function(n) {
+        e.d(t, n, (function() {
+          return i[n]
+        }))
+      }(o);
+      e("fd3e");
+      var r = e("f0c5"),
+        c = Object(r["a"])(i["default"], a["b"], a["c"], !1, null, "59817e40", null, !1, a["a"], void 0);
+      t["default"] = c.exports
+    },
+    6174: function(n, t, e) {
+      n.exports = e.p + "static/img/android-logo.40c5dc7c.png"
+    },
+    "651e": function(n, t, e) {
+      "use strict";
+      e.d(t, "b", (function() {
+        return a
+      })), e.d(t, "c", (function() {
+        return i
+      })), e.d(t, "a", (function() {}));
+      var a = function() {
+          var n = this,
+            t = n.$createElement,
+            e = n._self._c || t;
+          return e("v-uni-view", {
+            staticClass: "wrapper"
+          }, [n._t("loadSuccess"), "loading" == n.state ? e("v-uni-view", {
+            staticClass: "loading_info"
+          }, [n._v("正在加载中...")]) : "loadFail" == n.state ? e("v-uni-view", {
+            staticClass: "loadFail_info"
+          }, [e("v-uni-view", {
+            staticClass: "info"
+          }, [e("v-uni-view", [n._v(n._s(n.loadFaliMessage))]), e("v-uni-button", {
+            on: {
+              click: function(t) {
+                arguments[0] = t = n.$handleEvent(t), n.retry.apply(void 0, arguments)
+              }
+            }
+          }, [n._v("请重试")])], 1)], 1) : n._e()], 2)
+        },
+        i = []
+    },
+    6757: function(n, t, e) {
+      "use strict";
+      e.d(t, "b", (function() {
+        return i
+      })), e.d(t, "c", (function() {
+        return o
+      })), e.d(t, "a", (function() {
+        return a
+      }));
+      var a = {
+          templatePage: e("d29d").default,
+          uniList: e("1e86").default,
+          uniListItem: e("fe74").default
+        },
+        i = function() {
+          var n = this,
+            t = n.$createElement,
+            a = n._self._c || t;
+          return a("v-uni-view", {
+            staticClass: "container"
+          }, [a("template-page", {
+            attrs: {
+              state: n.pageState,
+              retry: n.retry
+            },
+            scopedSlots: n._u([{
+              key: "loadSuccess",
+              fn: function() {
+                return [a("v-uni-view", {
+                  staticClass: "logo_container"
+                }, [n.isAndroid ? a("v-uni-image", {
+                  attrs: {
+                    src: e("6174"),
+                    mode: ""
+                  }
+                }) : a("v-uni-image", {
+                  attrs: {
+                    src: e("0fb5"),
+                    mode: ""
+                  }
+                }), a("p", {
+                  staticClass: "logo_name"
+                }, [n._v(n._s(n.appName))]), a("p", [n._v("当前版本：" + n._s(n.versionName))])], 1), a("uni-list", {
+                  staticClass: "list_container"
+                }, [a("uni-list-item", {
+                  attrs: {
+                    title: "基本业务功能隐私政策",
+                    showArrow: "true",
+                    clickable: !0
+                  },
+                  on: {
+                    click: function(t) {
+                      arguments[0] = t = n.$handleEvent(t), n.basePrivacySet.apply(void 0, arguments)
+                    }
+                  }
+                }), a("uni-list-item", {
+                  attrs: {
+                    title: "隐私政策（摘要）",
+                    showArrow: "true",
+                    clickable: !0
+                  },
+                  on: {
+                    click: function(t) {
+                      arguments[0] = t = n.$handleEvent(t), n.fullPrivacySet.apply(void 0, arguments)
+                    }
+                  }
+                }), n.isVisitorMode ? n._e() : a("uni-list-item", {
+                  attrs: {
+                    title: "隐私政策撤回",
+                    showArrow: "true",
+                    clickable: !0
+                  },
+                  on: {
+                    click: function(t) {
+                      arguments[0] = t = n.$handleEvent(t), n.revokePrivacy.apply(void 0, arguments)
+                    }
+                  }
+                })], 1), a("v-uni-view", {
+                  staticClass: "copyright_container"
+                }, [n._v(n._s(n.copyright))]), n.isShowVisit && !n.isAndroid ? a("v-uni-view", {
+                  staticClass: "visitor_container",
+                  on: {
+                    click: function(t) {
+                      arguments[0] = t = n.$handleEvent(t), n.goLogin.apply(void 0, arguments)
+                    }
+                  }
+                }, [n._v("访客模式")]) : n._e()]
+              },
+              proxy: !0
+            }])
+          })], 1)
+        },
+        o = []
+    },
+    "6a2d": function(n, t, e) {
+      var a = e("4bad");
+      t = a(!1), t.push([n.i, '@charset "UTF-8";\n/**\n * 这里是uni-app内置的常用样式变量\n *\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\n *\n */\n/**\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\n *\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\n */\n/* 颜色变量 */\n/* 行为相关颜色 */\n/* 文字基本颜色 */\n/* 背景颜色 */\n/* 边框颜色 */\n/* 尺寸变量 */\n/* 文字尺寸 */\n/* 图片尺寸 */\n/* Border Radius */\n/* 水平间距 */\n/* 垂直间距 */\n/* 透明度 */\n/* 文章场景相关 */\n/*绝对定位-左上角*/\n/*绝对定位-左下角*/\n/*绝对定位-右上角*/\n/*绝对定位-右下角*/\n/*绝对定位-垂直水平居中*/\n/*绝对定位-底部水平居中*/\n/*绝对定位-顶部水平居中*/\n/*固定定位 元素居中*/\n/*粘性定位*/\n/*固定定位*/\n/*-------flexible box--------*/\n/*水平排列*/\n/*水平排列允许换行*/\n/*水平排列 上下居中*/\n/*左右顶头*/\n/*左右顶头 上下居中*/\n/*水平垂直居中*/\n/*水平居中*/\n/*列居中*/\n/*上下顶边*/\n/*-----字号------*/\n/*文字超出省略号*/\n/*背景*/\n/*背景图*/\n/*边框*/\n/*底部边框*/\n/*顶部边框*/\n/*左侧边框*/\n/*右侧边框*/\n/*四边边框*/\n/*过渡动画*/.container[data-v-59817e40]{position:relative;width:100vw;height:100vh;background-color:#f1f1f1}.container .logo_container[data-v-59817e40]{width:%?400?%;position:absolute;left:50%;top:%?320?%;-webkit-transform:translate(-50%);transform:translate(-50%);display:flex;flex-direction:column;justify-content:center;align-items:center}.container .logo_container uni-image[data-v-59817e40]{width:%?200?%;height:%?200?%;margin-bottom:%?20?%}.container .logo_container p[data-v-59817e40]{margin-bottom:%?20?%;font-size:%?28?%;color:#a1a1a1}.container .logo_container .logo_name[data-v-59817e40]{font-size:%?36?%;color:#000}.container .list_container[data-v-59817e40]{position:absolute;left:50%;top:%?670?%;-webkit-transform:translate(-50%);transform:translate(-50%);width:100%}.container .list_container[data-v-59817e40]  .uni-list-item__content-title{font-size:%?36?%}.container .list_container[data-v-59817e40]  .uni-list--border:after{left:%?30?%}.container .copyright_container[data-v-59817e40]{width:100%;text-align:center;position:absolute;left:50%;bottom:%?110?%;-webkit-transform:translate(-50%);transform:translate(-50%);font-size:%?28?%;color:#a1a1a1}.container .visitor_container[data-v-59817e40]{width:100%;text-align:center;position:absolute;left:50%;bottom:%?50?%;-webkit-transform:translate(-50%);transform:translate(-50%);font-size:%?28?%;color:#a1a1a1;text-decoration:underline}[data-v-59817e40] .uni-list-item{height:3rem!important}[data-v-59817e40] .uni-list--base{width:1rem!important;height:1rem!important}', ""]), n.exports = t
+    },
+    "6ea3": function(n, t, e) {
+      "use strict";
+      e("7a82"), Object.defineProperty(t, "__esModule", {
+        value: !0
+      }), t.default = void 0;
+      t.default = {
+        name: "template-page",
+        props: {
+          title: {
+            type: String,
+            default: ""
+          },
+          color: {
+            type: String,
+            default: ""
+          },
+          state: {
+            type: String,
+            default: "loading"
+          },
+          retry: {
+            type: Function,
+            default: function() {}
+          },
+          loadFaliMessage: {
+            type: String,
+            default: ""
+          }
+        },
+        data: function() {
+          return {}
+        },
+        onLoad: function() {
+          console.log("刷新了")
+        },
+        methods: {}
+      }
+    },
+    "7c99": function(n, t, e) {
+      var a = e("4bad");
+      t = a(!1), t.push([n.i, '@charset "UTF-8";\n/**\n * 这里是uni-app内置的常用样式变量\n *\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\n *\n */\n/**\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\n *\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\n */\n/* 颜色变量 */\n/* 行为相关颜色 */\n/* 文字基本颜色 */\n/* 背景颜色 */\n/* 边框颜色 */\n/* 尺寸变量 */\n/* 文字尺寸 */\n/* 图片尺寸 */\n/* Border Radius */\n/* 水平间距 */\n/* 垂直间距 */\n/* 透明度 */\n/* 文章场景相关 */\n/*绝对定位-左上角*/\n/*绝对定位-左下角*/\n/*绝对定位-右上角*/\n/*绝对定位-右下角*/\n/*绝对定位-垂直水平居中*/\n/*绝对定位-底部水平居中*/\n/*绝对定位-顶部水平居中*/\n/*固定定位 元素居中*/\n/*粘性定位*/\n/*固定定位*/\n/*-------flexible box--------*/\n/*水平排列*/\n/*水平排列允许换行*/\n/*水平排列 上下居中*/\n/*左右顶头*/\n/*左右顶头 上下居中*/\n/*水平垂直居中*/\n/*水平居中*/\n/*列居中*/\n/*上下顶边*/\n/*-----字号------*/\n/*文字超出省略号*/\n/*背景*/\n/*背景图*/\n/*边框*/\n/*底部边框*/\n/*顶部边框*/\n/*左侧边框*/\n/*右侧边框*/\n/*四边边框*/\n/*过渡动画*/[data-v-4aa361d3] .uni-nav-bar-text{font-size:%?36?%}.wrapper[data-v-4aa361d3]{min-height:100vh;position:relative}.loading_info[data-v-4aa361d3],\n.loadFail_info[data-v-4aa361d3]{position:absolute;top:0;font-size:%?36?%;width:100vw;height:100vh;background-color:#fff;display:flex;justify-content:center;align-items:center;color:#000;z-index:99}.loading_info .info[data-v-4aa361d3],\n.loadFail_info .info[data-v-4aa361d3]{text-align:center}.loading_info .info uni-button[data-v-4aa361d3],\n.loadFail_info .info uni-button[data-v-4aa361d3]{margin-top:%?10?%;width:%?200?%}.ddddd[data-v-4aa361d3]{background-color:#000}', ""]), n.exports = t
+    },
+    b35f: function(n, t, e) {
+      var a = e("6a2d");
+      a.__esModule && (a = a.default), "string" === typeof a && (a = [
+        [n.i, a, ""]
+      ]), a.locals && (n.exports = a.locals);
+      var i = e("4f06").default;
+      i("4375fa28", a, !0, {
+        sourceMap: !1,
+        shadowMode: !1
+      })
+    },
+    d29d: function(n, t, e) {
+      "use strict";
+      e.r(t);
+      var a = e("651e"),
+        i = e("20f7");
+      for (var o in i)["default"].indexOf(o) < 0 && function(n) {
+        e.d(t, n, (function() {
+          return i[n]
+        }))
+      }(o);
+      e("3dab");
+      var r = e("f0c5"),
+        c = Object(r["a"])(i["default"], a["b"], a["c"], !1, null, "4aa361d3", null, !1, a["a"], void 0);
+      t["default"] = c.exports
+    },
+    ea81: function(n, t, e) {
+      var a = e("7c99");
+      a.__esModule && (a = a.default), "string" === typeof a && (a = [
+        [n.i, a, ""]
+      ]), a.locals && (n.exports = a.locals);
+      var i = e("4f06").default;
+      i("4326e34c", a, !0, {
+        sourceMap: !1,
+        shadowMode: !1
+      })
+    },
+    fd3e: function(n, t, e) {
+      "use strict";
+      var a = e("b35f"),
+        i = e.n(a);
+      i.a
+    }
+  }
+]);

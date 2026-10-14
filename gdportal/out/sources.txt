@@ -1,0 +1,13 @@
+src/com/gdportal/core/AccountStore.java
+src/com/gdportal/core/CdcClient.java
+src/com/gdportal/core/Codec.java
+src/com/gdportal/core/FileCodec.java
+src/com/gdportal/core/Json.java
+src/com/gdportal/core/MockCodec.java
+src/com/gdportal/core/XmlBuilder.java
+src/com/gdportal/core/XmlLite.java
+src/com/gdportal/Main.java
+android-src/com/cndatacom/campus/netcore/DaMod.java
+android-src/com/gdportal/android/CliActivity.java
+android-src/com/gdportal/android/DaModCodec.java
+android-src/com/gdportal/android/DialService.java

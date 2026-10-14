@@ -1,0 +1,80 @@
+.class Lcom/cndatacom/personal/entity/PersonalInfo$1;
+.super Ljava/lang/Object;
+.source "PersonalInfo.java"
+
+# interfaces
+.implements Landroid/os/Parcelable$Creator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/cndatacom/personal/entity/PersonalInfo;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator<",
+        "Lcom/cndatacom/personal/entity/PersonalInfo;",
+        ">;"
+    }
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public createFromParcel(Landroid/os/Parcel;)Lcom/cndatacom/personal/entity/PersonalInfo;
+    .locals 1
+
+    .line 2
+    new-instance v0, Lcom/cndatacom/personal/entity/PersonalInfo;
+
+    invoke-direct {v0, p1}, Lcom/cndatacom/personal/entity/PersonalInfo;-><init>(Landroid/os/Parcel;)V
+
+    return-object v0
+.end method
+
+.method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/cndatacom/personal/entity/PersonalInfo$1;->createFromParcel(Landroid/os/Parcel;)Lcom/cndatacom/personal/entity/PersonalInfo;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public newArray(I)[Lcom/cndatacom/personal/entity/PersonalInfo;
+    .locals 0
+
+    .line 2
+    new-array p1, p1, [Lcom/cndatacom/personal/entity/PersonalInfo;
+
+    return-object p1
+.end method
+
+.method public bridge synthetic newArray(I)[Ljava/lang/Object;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/cndatacom/personal/entity/PersonalInfo$1;->newArray(I)[Lcom/cndatacom/personal/entity/PersonalInfo;
+
+    move-result-object p1
+
+    return-object p1
+.end method

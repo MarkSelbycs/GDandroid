@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_update_bg" android:padding="10.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10.0dp">
+        <TextView android:textSize="@dimen/dialogSecondTextSize" android:textColor="#323233" android:gravity="center" android:id="@id/message_tv" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10.0dp" android:text="" />
+        <LinearLayout android:orientation="vertical" android:id="@id/update_downloading" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dp" android:layout_marginTop="20.0dp" android:layout_marginRight="10.0dp">
+            <ProgressBar android:id="@id/update_progress_bar" android:layout_width="match_parent" android:layout_height="wrap_content" android:progressDrawable="@drawable/progressbar_color" style="?android:progressBarStyleHorizontal" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="25.0dp">
+                <TextView android:textSize="@dimen/dialogSecondTextSize" android:textColor="#323233" android:layout_gravity="center_vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/update_tip" android:layout_weight="1.0" />
+                <TextView android:textSize="@dimen/dialogSecondTextSize" android:textColor="#323233" android:gravity="right" android:id="@id/update_progress_text" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="(0M/0M)" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout android:id="@id/update_finish" android:background="@drawable/btn_primary_bg" android:padding="10.0dp" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10.0dp">
+            <TextView android:textSize="@dimen/dialogSecondTextSize" android:textColor="#fff" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/update_finish" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/update_error" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10.0dp">
+            <RelativeLayout android:id="@id/update_cancel" android:background="@drawable/btn_default_bg" android:padding="10.0dp" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dp" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/dialogSecondTextSize" android:textColor="#323233" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/update_cancel" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/update_retry" android:background="@drawable/btn_primary_bg" android:padding="10.0dp" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dp" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/dialogSecondTextSize" android:textColor="#fff" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/update_retry" android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

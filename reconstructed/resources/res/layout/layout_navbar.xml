@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/colorPrimaryDark" android:layout_width="match_parent" android:layout_height="@dimen/actionBarHeight"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout android:orientation="horizontal" android:id="@id/back_btn" android:paddingLeft="10.0dp" android:paddingRight="10.0dp" android:layout_width="wrap_content" android:layout_height="match_parent">
+            <ImageView android:layout_gravity="center_vertical" android:background="@mipmap/back" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/actionBarTextSize" android:textColor="@color/titleColor" android:layout_gravity="center_vertical" android:id="@id/back_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dp" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <View android:background="@color/dividerColor" android:layout_width="match_parent" android:layout_height="0.100000024dp" app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

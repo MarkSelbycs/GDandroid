@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginHorizontal="15.0dp">
+        <RelativeLayout android:background="@drawable/dialog_top_bg" android:padding="5.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="16.0dp">
+            <TextView android:textSize="@dimen/dialogTitleSize" android:gravity="center" android:id="@id/title_tv" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/dialogTitleSize" android:id="@id/close_btn" android:paddingLeft="5.0dp" android:paddingTop="2.0dp" android:paddingRight="5.0dp" android:paddingBottom="2.0dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✕" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/message_view" android:background="@android:color/white" android:paddingLeft="5.0dp" android:paddingTop="5.0dp" android:paddingRight="5.0dp" android:paddingBottom="10.0dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/dialogTextSize" android:gravity="center" android:id="@id/message_tv" android:background="@android:color/white" android:paddingLeft="5.0dp" android:paddingTop="5.0dp" android:paddingRight="5.0dp" android:paddingBottom="10.0dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:lineSpacingMultiplier="1.2" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/other_ll" android:background="@drawable/dialog_bottom_bg" android:layout_width="match_parent" android:layout_height="5.0dp" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/single_ll" android:layout_width="match_parent" android:layout_height="@dimen/dialogTitleHeight">
+            <RelativeLayout android:id="@id/single_btn" android:background="@drawable/dialog_single_bg" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent">
+                <TextView android:textSize="@dimen/dialogSecondTextSize" android:gravity="center" android:id="@id/single_btn_tv" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/double_ll" android:layout_width="match_parent" android:layout_height="@dimen/dialogTitleHeight">
+            <RelativeLayout android:id="@id/double_cancel_btn" android:background="@drawable/dialog_left_bg" android:clickable="true" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/dialogSecondTextSize" android:gravity="center" android:id="@id/double_cancel_btn_tv" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/double_confirm_btn" android:background="@drawable/dialog_right_bg" android:clickable="true" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/dialogSecondTextSize" android:gravity="center" android:id="@id/double_confirm_btn_tv" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,224 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([
+  ["pages-guidePage-guidePage"], {
+    1698: function(n, e, t) {
+      "use strict";
+      t("7a82"), Object.defineProperty(e, "__esModule", {
+        value: !0
+      }), e.PluginApi = void 0, t("c975");
+      var i = uni.requireNativePlugin("PortalMananger"),
+        o = e.PluginApi = {
+          coolMethod: function(n, e, t) {
+            (void 0 == t || void 0 != t && "function" != typeof t) && (t = function() {});
+            var o = {
+              action: n,
+              args: e
+            };
+            i.coolMethod(o, t)
+          }
+        };
+
+      function a() {
+        uni.addInterceptor("showModal", {
+          invoke: function(n) {
+            var e = null,
+              t = {};
+            for (var i in n) {
+              var a = n[i];
+              void 0 != a && ("function" == typeof a ? e = a : t[i] = a)
+            }
+            return o.coolMethod("showModal", [t], (function(n) {
+              e && e(n)
+            })), !1
+          }
+        }), uni.addInterceptor("showToast", {
+          invoke: function(n) {
+            return o.coolMethod("showToast", [n]), !1
+          }
+        }), uni.addInterceptor("showLoading", {
+          invoke: function(n) {
+            return o.coolMethod("showLoading", [n]), !1
+          }
+        }), uni.addInterceptor("hideLoading", {
+          invoke: function(n) {
+            return o.coolMethod("hideLoading", []), !1
+          }
+        })
+      }
+      uni.addInterceptor("request", {
+        invoke: function(n) {
+          return !0
+        }
+      }), getApp().globalData.phoneType ? "android" === getApp().globalData.phoneType.toLowerCase() ? a() : uni.addInterceptor("showToast", {
+        invoke: function(n) {
+          n.position = "bottom"
+        }
+      }) : uni.getSystemInfo({
+        success: function(n) {
+          "android" == n.osName ? a() : uni.addInterceptor("showToast", {
+            invoke: function(n) {
+              n.position = "bottom"
+            }
+          })
+        }
+      })
+    },
+    "23b1": function(n, e, t) {
+      "use strict";
+      t.r(e);
+      var i = t("3dfb"),
+        o = t.n(i);
+      for (var a in i)["default"].indexOf(a) < 0 && function(n) {
+        t.d(e, n, (function() {
+          return i[n]
+        }))
+      }(a);
+      e["default"] = o.a
+    },
+    "2d0b": function(n, e, t) {
+      var i = t("6b80");
+      i.__esModule && (i = i.default), "string" === typeof i && (i = [
+        [n.i, i, ""]
+      ]), i.locals && (n.exports = i.locals);
+      var o = t("4f06").default;
+      o("c5c66800", i, !0, {
+        sourceMap: !1,
+        shadowMode: !1
+      })
+    },
+    "3dfb": function(n, e, t) {
+      "use strict";
+      t("7a82"), Object.defineProperty(e, "__esModule", {
+        value: !0
+      }), e.default = void 0;
+      var i = t("1698");
+      e.default = {
+        data: function() {
+          return {
+            isShow: !0,
+            currentIndex: 0,
+            screenWidth: 400,
+            newPath: "",
+            phoneModelType: ""
+          }
+        },
+        onLoad: function() {
+          var n = getApp().globalData.screenWidth;
+          "android" != getApp().globalData.phoneModelType && "iPhone" != getApp().globalData.phoneModelType && (this.phoneModelType = getApp().globalData.phoneModelType), this.newPath = n <= 200 ? "Android/200" : n <= 320 ? "Android/320" : n <= 400 ? "Android/400" : n <= 720 ? "Android/720" : "Android/1242"
+        },
+        onBackPress: function(n) {
+          if ("backbutton" == n.from) return !0
+        },
+        onReady: function() {
+          setTimeout((function() {
+            uni.$emit("closeSplashscreen")
+          }), 500)
+        },
+        methods: {
+          changeShow: function() {
+            this.isShow = !1
+          },
+          newClick: function(n) {
+            1 == n ? (uni.setStorageSync("isAgainOpen", !0), uni.switchTab({
+              url: "/pages/index/index"
+            }), i.PluginApi.coolMethod("onCheckNet", [])) : this.currentIndex = 1
+          }
+        }
+      }
+    },
+    4261: function(n, e, t) {
+      "use strict";
+      t.d(e, "b", (function() {
+        return i
+      })), t.d(e, "c", (function() {
+        return o
+      })), t.d(e, "a", (function() {}));
+      var i = function() {
+          var n = this,
+            e = n.$createElement,
+            t = n._self._c || e;
+          return t("v-uni-view", {
+            staticClass: "container"
+          }, [n.isShow ? t("v-uni-view", {
+            staticClass: "swiper_container"
+          }, [t("v-uni-swiper", {
+            staticClass: "swiper"
+          }, [t("v-uni-swiper-item", [t("v-uni-image", {
+            attrs: {
+              src: "../../static/image/guidePage/" + n.phoneModelType + "001.jpg",
+              mode: ""
+            }
+          })], 1), t("v-uni-swiper-item", [t("v-uni-image", {
+            attrs: {
+              src: "../../static/image/guidePage/" + n.phoneModelType + "002.jpg",
+              mode: ""
+            }
+          })], 1), t("v-uni-swiper-item", [t("v-uni-image", {
+            attrs: {
+              src: "../../static/image/guidePage/" + n.phoneModelType + "003.jpg",
+              mode: ""
+            },
+            on: {
+              click: function(e) {
+                arguments[0] = e = n.$handleEvent(e), n.changeShow.apply(void 0, arguments)
+              }
+            }
+          })], 1)], 1), t("span", {
+            staticClass: "skip",
+            on: {
+              click: function(e) {
+                arguments[0] = e = n.$handleEvent(e), n.changeShow.apply(void 0, arguments)
+              }
+            }
+          }, [n._v("跳过")])], 1) : t("v-uni-view", {
+            staticClass: "welcome_container"
+          }, [0 == n.currentIndex ? t("v-uni-image", {
+            attrs: {
+              src: "../../static/image/guidePage/" + n.newPath + "/1.png",
+              mode: ""
+            },
+            on: {
+              click: function(e) {
+                arguments[0] = e = n.$handleEvent(e), n.newClick(0)
+              }
+            }
+          }) : t("v-uni-image", {
+            attrs: {
+              src: "../../static/image/guidePage/" + n.newPath + "/2.png",
+              mode: ""
+            },
+            on: {
+              click: function(e) {
+                arguments[0] = e = n.$handleEvent(e), n.newClick(1)
+              }
+            }
+          })], 1)], 1)
+        },
+        o = []
+    },
+    "6b80": function(n, e, t) {
+      var i = t("4bad");
+      e = i(!1), e.push([n.i, '@charset "UTF-8";\n/**\n * 这里是uni-app内置的常用样式变量\n *\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\n *\n */\n/**\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\n *\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\n */\n/* 颜色变量 */\n/* 行为相关颜色 */\n/* 文字基本颜色 */\n/* 背景颜色 */\n/* 边框颜色 */\n/* 尺寸变量 */\n/* 文字尺寸 */\n/* 图片尺寸 */\n/* Border Radius */\n/* 水平间距 */\n/* 垂直间距 */\n/* 透明度 */\n/* 文章场景相关 */\n/*绝对定位-左上角*/\n/*绝对定位-左下角*/\n/*绝对定位-右上角*/\n/*绝对定位-右下角*/\n/*绝对定位-垂直水平居中*/\n/*绝对定位-底部水平居中*/\n/*绝对定位-顶部水平居中*/\n/*固定定位 元素居中*/\n/*粘性定位*/\n/*固定定位*/\n/*-------flexible box--------*/\n/*水平排列*/\n/*水平排列允许换行*/\n/*水平排列 上下居中*/\n/*左右顶头*/\n/*左右顶头 上下居中*/\n/*水平垂直居中*/\n/*水平居中*/\n/*列居中*/\n/*上下顶边*/\n/*-----字号------*/\n/*文字超出省略号*/\n/*背景*/\n/*背景图*/\n/*边框*/\n/*底部边框*/\n/*顶部边框*/\n/*左侧边框*/\n/*右侧边框*/\n/*四边边框*/\n/*过渡动画*/.container[data-v-00f580f5]{width:100vw;height:100vh;position:relative;overflow-x:auto}.container .swiper_container[data-v-00f580f5]{width:100vw;height:100vh;position:relative;overflow-x:auto}.container .swiper_container .swiper[data-v-00f580f5]{height:100%}.container .swiper_container .swiper uni-image[data-v-00f580f5]{width:100vw;height:100vh}.container .swiper_container .skip[data-v-00f580f5]{position:absolute;top:%?80?%;right:%?40?%;color:#fff;background-color:rgba(0,0,0,.5);padding:%?10?% %?15?%;border-radius:%?10?%}.container .welcome_container[data-v-00f580f5]{width:100vw;height:100vh;position:relative}.container .welcome_container uni-image[data-v-00f580f5]{width:100%;height:100%}', ""]), n.exports = e
+    },
+    "865d": function(n, e, t) {
+      "use strict";
+      t.r(e);
+      var i = t("4261"),
+        o = t("23b1");
+      for (var a in o)["default"].indexOf(a) < 0 && function(n) {
+        t.d(e, n, (function() {
+          return o[n]
+        }))
+      }(a);
+      t("edc5");
+      var r = t("f0c5"),
+        c = Object(r["a"])(o["default"], i["b"], i["c"], !1, null, "00f580f5", null, !1, i["a"], void 0);
+      e["default"] = c.exports
+    },
+    edc5: function(n, e, t) {
+      "use strict";
+      var i = t("2d0b"),
+        o = t.n(i);
+      o.a
+    }
+  }
+]);

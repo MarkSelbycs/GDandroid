@@ -1,0 +1,824 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([
+  ["pages-customerService-customerService"], {
+    2051: function(t, e, n) {
+      "use strict";
+      n.r(e);
+      var i = n("5262"),
+        a = n.n(i);
+      for (var c in i)["default"].indexOf(c) < 0 && function(t) {
+        n.d(e, t, (function() {
+          return i[t]
+        }))
+      }(c);
+      e["default"] = a.a
+    },
+    "20f7": function(t, e, n) {
+      "use strict";
+      n.r(e);
+      var i = n("6ea3"),
+        a = n.n(i);
+      for (var c in i)["default"].indexOf(c) < 0 && function(t) {
+        n.d(e, t, (function() {
+          return i[t]
+        }))
+      }(c);
+      e["default"] = a.a
+    },
+    "29b5": function(t, e, n) {
+      var i = n("8151");
+      i.__esModule && (i = i.default), "string" === typeof i && (i = [
+        [t.i, i, ""]
+      ]), i.locals && (t.exports = i.locals);
+      var a = n("4f06").default;
+      a("422f9bc5", i, !0, {
+        sourceMap: !1,
+        shadowMode: !1
+      })
+    },
+    "2d6d": function(t, e, n) {
+      var i = n("3d55");
+      i.__esModule && (i = i.default), "string" === typeof i && (i = [
+        [t.i, i, ""]
+      ]), i.locals && (t.exports = i.locals);
+      var a = n("4f06").default;
+      a("31d8a865", i, !0, {
+        sourceMap: !1,
+        shadowMode: !1
+      })
+    },
+    "33ef": function(t, e, n) {
+      "use strict";
+      n.d(e, "b", (function() {
+        return a
+      })), n.d(e, "c", (function() {
+        return c
+      })), n.d(e, "a", (function() {
+        return i
+      }));
+      var i = {
+          templatePage: n("d29d").default,
+          uniList: n("1e86").default,
+          uniListItem: n("fe74").default
+        },
+        a = function() {
+          var t = this,
+            e = t.$createElement,
+            i = t._self._c || e;
+          return i("template-page", {
+            staticClass: "container",
+            attrs: {
+              state: "loadSuccess",
+              retry: t.retry
+            },
+            scopedSlots: t._u([{
+              key: "loadSuccess",
+              fn: function() {
+                return [i("v-uni-view", {
+                  staticClass: "main_container"
+                }, [i("uni-list", {
+                  attrs: {
+                    border: !1,
+                    id: "chatList"
+                  }
+                }, t._l(t.chatContentList, (function(e, a) {
+                  return i("uni-list-item", {
+                    key: a,
+                    staticClass: "chat",
+                    attrs: {
+                      direction: "column"
+                    },
+                    scopedSlots: t._u([{
+                      key: "header",
+                      fn: function() {
+                        return [e.showTime ? i("v-uni-view", {
+                          staticClass: "chat_time"
+                        }, [t._v(t._s(e.currentTime))]) : t._e()]
+                      },
+                      proxy: !0
+                    }, {
+                      key: "body",
+                      fn: function() {
+                        return [i("v-uni-view", {
+                          staticClass: "chat_content"
+                        }, [0 == e.id ? i("v-uni-view", {
+                          staticClass: "chat_content_user"
+                        }, [i("v-uni-view", {
+                          staticClass: "heard_text"
+                        }, [t._v(t._s(e.text))]), i("v-uni-image", {
+                          staticClass: "heard_img",
+                          attrs: {
+                            src: n("fe49"),
+                            mode: ""
+                          }
+                        })], 1) : i("v-uni-view", {
+                          staticClass: "chat_content_service"
+                        }, [i("v-uni-image", {
+                          staticClass: "heard_img",
+                          attrs: {
+                            src: e.imgUrl,
+                            mode: ""
+                          }
+                        }), i("v-uni-view", {
+                          staticClass: "heard_text"
+                        }, [i("v-uni-rich-text", {
+                          attrs: {
+                            nodes: e.text
+                          },
+                          on: {
+                            itemclick: function(e) {
+                              arguments[0] = e = t.$handleEvent(e), t.richClick.apply(void 0, arguments)
+                            }
+                          }
+                        })], 1)], 1)], 1)]
+                      },
+                      proxy: !0
+                    }, {
+                      key: "footer",
+                      fn: function() {
+                        return [0 == e.id && 1 != e.state ? i("v-uni-view", {
+                          staticClass: "chat_state"
+                        }, [0 == e.state ? i("p", [t._v("发送中...")]) : -1 == e.state ? i("p", [t._v("消息发送失败，是否"), i("span", {
+                          staticClass: "chat_state_fail",
+                          on: {
+                            click: function(n) {
+                              arguments[0] = n = t.$handleEvent(n), t.sendAgain(a, e.text)
+                            }
+                          }
+                        }, [t._v("重新发送")])]) : t._e()]) : t._e()]
+                      },
+                      proxy: !0
+                    }], null, !0)
+                  })
+                })), 1)], 1), i("v-uni-view", {
+                  staticClass: "input_container"
+                }, [i("v-uni-view", {
+                  staticClass: "top"
+                }, [i("v-uni-view", {
+                  staticClass: "top_title"
+                }, [t._v("想问：")]), t._l(t.terminalList, (function(e, n) {
+                  return t.questionHide != e ? i("span", {
+                    key: n,
+                    staticClass: "top_btn",
+                    on: {
+                      click: function(e) {
+                        arguments[0] = e = t.$handleEvent(e), t.publishQuestion(n)
+                      }
+                    }
+                  }, [t._v(t._s(e))]) : t._e()
+                }))], 2), i("v-uni-view", {
+                  staticClass: "bottom"
+                }, [i("v-uni-input", {
+                  staticClass: "input",
+                  attrs: {
+                    type: "text",
+                    placeholder: "请输入您的问题",
+                    value: t.value
+                  },
+                  on: {
+                    input: function(e) {
+                      arguments[0] = e = t.$handleEvent(e), t.getInputValue.apply(void 0, arguments)
+                    }
+                  }
+                }), i("v-uni-image", {
+                  staticClass: "submit",
+                  attrs: {
+                    src: n("3d19")
+                  },
+                  on: {
+                    click: function(e) {
+                      arguments[0] = e = t.$handleEvent(e), t.submit.apply(void 0, arguments)
+                    }
+                  }
+                })], 1)], 1)]
+              },
+              proxy: !0
+            }])
+          })
+        },
+        c = []
+    },
+    3696: function(t, e, n) {
+      "use strict";
+      var i = n("2d6d"),
+        a = n.n(i);
+      a.a
+    },
+    "37e6": function(t, e, n) {
+      "use strict";
+      n("7a82"), Object.defineProperty(e, "__esModule", {
+        value: !0
+      }), e.default = void 0, n("c975"), n("14d9"), n("13d5"), n("3c65"), n("d3b7"), n("4d63"), n("c607"), n("ac1f"), n("2c3e"), n("25f0"), n("466d"), n("5319");
+      var i = /^<([-A-Za-z0-9_]+)((?:\s+[a-zA-Z_:][-a-zA-Z0-9_:.]*(?:\s*=\s*(?:(?:"[^"]*")|(?:'[^']*')|[^>\s]+))?)*)\s*(\/?)>/,
+        a = /^<\/([-A-Za-z0-9_]+)[^>]*>/,
+        c = /([a-zA-Z_:][-a-zA-Z0-9_:.]*)(?:\s*=\s*(?:(?:"((?:\\.|[^"])*)")|(?:'((?:\\.|[^'])*)')|([^>\s]+)))?/g,
+        o = h("area,base,basefont,br,col,frame,hr,img,input,link,meta,param,embed,command,keygen,source,track,wbr"),
+        r = h("a,address,article,applet,aside,audio,blockquote,button,canvas,center,dd,del,dir,div,dl,dt,fieldset,figcaption,figure,footer,form,frameset,h1,h2,h3,h4,h5,h6,header,hgroup,hr,iframe,isindex,li,map,menu,noframes,noscript,object,ol,output,p,pre,section,script,table,tbody,td,tfoot,th,thead,tr,ul,video"),
+        s = h("abbr,acronym,applet,b,basefont,bdo,big,br,button,cite,code,del,dfn,em,font,i,iframe,img,input,ins,kbd,label,map,object,q,s,samp,script,select,small,span,strike,strong,sub,sup,textarea,tt,u,var"),
+        u = h("colgroup,dd,dt,li,options,p,td,tfoot,th,thead,tr"),
+        l = h("checked,compact,declare,defer,disabled,ismap,multiple,nohref,noresize,noshade,nowrap,readonly,selected"),
+        d = h("script,style");
+
+      function h(t) {
+        for (var e = {}, n = t.split(","), i = 0; i < n.length; i++) e[n[i]] = !0;
+        return e
+      }
+      e.default = function(t) {
+        t = function(t) {
+          return t.replace(/<\?xml.*\?>\n/, "").replace(/<!doctype.*>\n/, "").replace(/<!DOCTYPE.*>\n/, "")
+        }(t);
+        var e = [],
+          n = {
+            node: "root",
+            children: []
+          };
+        return function(t, e) {
+          var n, h, f, p = [],
+            g = t;
+          p.last = function() {
+            return this[this.length - 1]
+          };
+          while (t) {
+            if (h = !0, p.last() && d[p.last()]) t = t.replace(new RegExp("([\\s\\S]*?)</" + p.last() + "[^>]*>"), (function(t, n) {
+              return n = n.replace(/<!--([\s\S]*?)-->|<!\[CDATA\[([\s\S]*?)]]>/g, "$1$2"), e.chars && e.chars(n), ""
+            })), b("", p.last());
+            else if (0 == t.indexOf("\x3c!--") ? (n = t.indexOf("--\x3e"), n >= 0 && (e.comment && e.comment(t.substring(4, n)), t = t.substring(n + 3), h = !1)) : 0 == t.indexOf("</") ? (f = t.match(a), f && (t = t.substring(f[0].length), f[0].replace(a, b), h = !1)) : 0 == t.indexOf("<") && (f = t.match(i), f && (t = t.substring(f[0].length), f[0].replace(i, m), h = !1)), h) {
+              n = t.indexOf("<");
+              var v = n < 0 ? t : t.substring(0, n);
+              t = n < 0 ? "" : t.substring(n), e.chars && e.chars(v)
+            }
+            if (t == g) throw "Parse Error: " + t;
+            g = t
+          }
+
+          function m(t, n, i, a) {
+            if (n = n.toLowerCase(), r[n])
+              while (p.last() && s[p.last()]) b("", p.last());
+            if (u[n] && p.last() == n && b("", n), a = o[n] || !!a, a || p.push(n), e.start) {
+              var d = [];
+              i.replace(c, (function(t, e) {
+                var n = arguments[2] ? arguments[2] : arguments[3] ? arguments[3] : arguments[4] ? arguments[4] : l[e] ? e : "";
+                d.push({
+                  name: e,
+                  value: n,
+                  escaped: n.replace(/(^|[^\\])"/g, '$1\\"')
+                })
+              })), e.start && e.start(n, d, a)
+            }
+          }
+
+          function b(t, n) {
+            if (n) {
+              for (i = p.length - 1; i >= 0; i--)
+                if (p[i] == n) break
+            } else var i = 0;
+            if (i >= 0) {
+              for (var a = p.length - 1; a >= i; a--) e.end && e.end(p[a]);
+              p.length = i
+            }
+          }
+          b()
+        }(t, {
+          start: function(t, i, a) {
+            var c = {
+              name: t
+            };
+            if (0 !== i.length && (c.attrs = function(t) {
+                return t.reduce((function(t, e) {
+                  var n = e.value,
+                    i = e.name;
+                  return t[i] ? t[i] = t[i] + " " + n : t[i] = n, t
+                }), {})
+              }(i)), a) {
+              var o = e[0] || n;
+              o.children || (o.children = []), o.children.push(c)
+            } else e.unshift(c)
+          },
+          end: function(t) {
+            var i = e.shift();
+            if (i.name !== t && console.error("invalid state: mismatch end tag"), 0 === e.length) n.children.push(i);
+            else {
+              var a = e[0];
+              a.children || (a.children = []), a.children.push(i)
+            }
+          },
+          chars: function(t) {
+            var i = {
+              type: "text",
+              text: t
+            };
+            if (0 === e.length) n.children.push(i);
+            else {
+              var a = e[0];
+              a.children || (a.children = []), a.children.push(i)
+            }
+          },
+          comment: function(t) {
+            var n = {
+                node: "comment",
+                text: t
+              },
+              i = e[0];
+            i.children || (i.children = []), i.children.push(n)
+          }
+        }), n.children
+      }
+    },
+    "3d19": function(t, e) {
+      t.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjkwRDgyRTY3MDI5ODExRTk4NDFCRDMxNUIyOTNEQTE1IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjkwRDgyRTY4MDI5ODExRTk4NDFCRDMxNUIyOTNEQTE1Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OTBEODJFNjUwMjk4MTFFOTg0MUJEMzE1QjI5M0RBMTUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OTBEODJFNjYwMjk4MTFFOTg0MUJEMzE1QjI5M0RBMTUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5bvfu2AAAFCklEQVR42tyba2wUVRiGj+tKDWKBakRsCREV8EqMGLEWgZBY+CHwSzAEYixeg4BGAokxQPBHiQqoQCh4CRdr4I9cAiRAYqMFJNJ4SWy4KwhUi0C6VAM1Jr4v826dbKa7sztntrvzJU/SbGfP+d6ZM+d85zvfXrdg8RJj2a4Hj4CR4CFwD6gAvUGprkmANnAGHAM/gW9AE/jXpjNxS+2UgEngGTAa/AL2ga/BWvAbuADadX0vcAsYAIaAB8EqcCdoAJvBFnC1uwXSyVngVdAM1oEXwMUM32sXp0Cj6/My3Si2t0KiP9TNycliOX6vJ3gHHAW3g8fAKPCpD3Hp7KLaYFsj1PZR9dUzXwKfBj+D/mAYeAmcNPbthNoepr6a1XdoQ/RG8C4YB6alDK0wjRNRDagCn4Fq8Ca4YvMJ8g7uB/00Q+ZLnNsa1fdt8qW/LYGD1Xi9ZsmE6T5LyId6+TQ46BC9W9P2XPC5KRx7D5yTb0+C47kI5OK8B8wvMHFJq1dQsVfv55lsBHLh3gbqwHqLTpW5lgMbtgGUy9fHvQKDrt7BpQqhai2Kmwf+EPMstlurtXKp30lmInhKEYktWyBH4qJWn9myF+XzxEwCbwYrJS5hUdxCj88XWhSZkM8rXQG9p8D5mpkaQhYXhkj6/FXq8I+nBM68Cw9b6tCv88kbsMjSe/6D3scLqU9wNtgEzuZRnO0neU4aZqUO0R7gZbA8JHFtHte1hSRyGXhFmjoFjle0fiIkcdUe11aHJPKktIx3C5xmYUF/Po24gx7XH0wjsiagL+ul6ZrAEq0h2wM2OjkLcZlETg7oyzZpKqHAR8Gv4HzARpuyFJdOZFNAX/5UXmh4XOkGG+seh2eLdiBrtOv3axT5hJapY4qBbayLI+LKau230OA/4KMA3+cNmWMxfPseVHKIDk23nypio6ahFDiwq71UkRsDloEU2EcvZdSMAXjfmKLv9ggKvMzdUcxE2zpiUtorguK4t22nwEvg1ogKvEyBPACpiKBAajpNgYcVfUTNqOkwBR6xuIsvJKOmIzHFgaMjKJBHcN9S4HfGOVmN0kRDLYPAIQpkNng3mBAhgROk6WpyoWcKfHqEBE6Xps6UxS5wP7grAuI4NO+Tpk6BHWC15f1Yd9kcbZg73AJpy5ULuaOIxdH3KeCD5AdugcwEs6ZlSRELpO+fuLd/cY8LmrUuNhThujdG75/xeoLJTeJM4ySNSi070OL6+3fLbZdq9L1mUk7FvPaDLKFqlEibNkPCmEqosdx2nXz+MvUfXR1h8ymy1ozHabZOeXcan6UfWRp9vBdUev2zK4F/G6eqiCKZkNpYoO/dVOPUtVXKZ98CjYSNNU7FIEscvygwcc8ap5xkpEmTFcxUJ3NcM+ourTHvF4i41/UajTEZcrp+atVYwcA6lB3GSfPPMN1X7cTZ8mNtZqtSZmZP85tVa9E4ZwlIkxrPt1Wp71b50uLnS9mkDa9onXlDkTojhvI8CCtXXxvU90zjs9IwW4FJ266dB9e0H7UGDQppV1CnPtjXAyaHM8xcE7+ckt8yzslUq9IeDO2eM/+Xa+ViZWqjQW22qg/29VcuDQat2WaA/jZYbJwzcW40k2VgB3T3OUmxKJ31aTwiuME4iea+WvhZEsmqXtaasUKftS7LNHN3BB0Gtqru6chW4f5ZAadxHmpW6OncZJxzRAq9pEmL0zx/VsDSj0PG8s8K/hNgAG2IJhULIExZAAAAAElFTkSuQmCC"
+    },
+    "3d55": function(t, e, n) {
+      var i = n("4bad");
+      e = i(!1), e.push([t.i, ".rich_text[data-v-287bf2c4]{color:#64b5f6;text-decoration:underline}.rich_img[data-v-287bf2c4]{width:100%;height:100%}", ""]), t.exports = e
+    },
+    "3dab": function(t, e, n) {
+      "use strict";
+      var i = n("ea81"),
+        a = n.n(i);
+      a.a
+    },
+    "4f39": function(t, e, n) {
+      "use strict";
+      var i = n("29b5"),
+        a = n.n(i);
+      a.a
+    },
+    5262: function(t, e, n) {
+      "use strict";
+      n("7a82");
+      var i = n("4ea4").default;
+      Object.defineProperty(e, "__esModule", {
+        value: !0
+      }), e.default = void 0, n("99af"), n("c975"), n("14d9"), n("a434"), n("f4b3"), n("e9c4"), n("b64b"), n("4d63"), n("c607"), n("ac1f"), n("2c3e"), n("25f0"), n("466d"), n("5319"), n("498a");
+      i(n("e143"));
+      var a, c = n("e1bd"),
+        o = n("c685"),
+        r = n("8f4d"),
+        s = i(n("37e6"));
+      e.default = {
+        data: function() {
+          return {
+            value: "",
+            pageState: "loadSuccess",
+            questionHide: "",
+            timeStamp: 3e5,
+            chatContentList: [],
+            serviceImgList: [{
+              type: "windows",
+              img: "../../static/image/customerService/img_body_win.png"
+            }, {
+              type: "android",
+              img: "../../static/image/customerService/img_body_and.png"
+            }, {
+              type: "mac",
+              img: "../../static/image/customerService/img_body_mac.png"
+            }, {
+              type: "ios",
+              img: "../../static/image/customerService/img_body_ios.png"
+            }],
+            currentServiceIndex: 0,
+            terminalList: ["Windows问题", "Android问题", "macOS问题", "iOS问题"]
+          }
+        },
+        onLoad: function() {
+          this.getTimeStamp(), this.getWelcomeMsg()
+        },
+        watch: {
+          chatContentList: function(t) {
+            a || (t[t.length - 1].showTime = !0, a = setTimeout((function() {
+              clearTimeout(a), a = null
+            }), this.timeStamp)), this.$nextTick((function() {
+              uni.createSelectorQuery().select("#chatList").boundingClientRect((function(t) {
+                uni.pageScrollTo({
+                  scrollTop: t.height,
+                  duration: 0,
+                  selector: "#chatList"
+                })
+              })).exec()
+            }))
+          }
+        },
+        onBackPress: function() {
+          this.onBackPressEvent()
+        },
+        onResize: function() {
+          this.$nextTick((function() {
+            uni.pageScrollTo({
+              scrollTop: 2e6,
+              duration: 0
+            })
+          }))
+        },
+        created: function() {
+          document.addEventListener("backbutton", this.handleBackButtonEvent, !1)
+        },
+        destroyed: function() {
+          document.removeEventListener("backbutton", this.handleBackButtonEvent, !1)
+        },
+        methods: {
+          handleBackButtonEvent: function() {
+            var t = getCurrentPages(),
+              e = t[t.length - 1].route;
+            e == this.$mp.page.route && uni.navigateBack()
+          },
+          onBackPressEvent: function() {
+            clearTimeout(a), a = null
+          },
+          richClick: function(t) {
+            var e = decodeURI(t.detail.node.attrs.content);
+            this.quickSend(JSON.parse(decodeURI(e)))
+          },
+          retry: function() {},
+          getWelcomeMsg: function(t) {
+            var e = this,
+              n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+            o.$funCtrl.getMulFunCfg(o.$funKey.FUN_CUSTOMERSERVICE_WELCOME, o.$funKey.FUN_CUSTOMERSERVICE_MSGTiME, (function(i) {
+              var a = i[o.$funKey.FUN_CUSTOMERSERVICE_WELCOME];
+              if (a && 1 == a.enable && a.url) {
+                if (void 0 != t) e.currentServiceIndex = t, e.questionHide = e.terminalList[t];
+                else
+                  for (var c = 0; c < e.serviceImgList.length; c++)
+                    if (e.serviceImgList[c].type == getApp().globalData.phoneType) {
+                      e.currentServiceIndex = c, e.questionHide = e.terminalList[c];
+                      break
+                    } var s = {
+                  os: e.serviceImgList[e.currentServiceIndex].type
+                };
+                o.$log.logInfoString("GetWelcomeMsg url ->" + a.url), r.httpRequest.post({
+                  url: a.url,
+                  data: JSON.stringify(s)
+                }).then((function(t) {
+                  if (e.chatContentList.length >= 1 && (e.chatContentList[e.chatContentList.length - 1].state = 1), t.data) {
+                    var n = e.resultDataAnalyze(t);
+                    console.log(n), e.chatContentList.push({
+                      id: 1,
+                      text: n,
+                      currentTime: getApp().dateToYYMMDDHHMMSS(),
+                      imgUrl: e.serviceImgList[e.currentServiceIndex].img
+                    })
+                  } else e.setUniversalFailMsg()
+                })).catch((function(t) {
+                  if (n)
+                    for (var i = 0; i < e.chatContentList.length; i++)
+                      if (e.chatContentList[i].uuid == n) {
+                        e.chatContentList[i].state = -1;
+                        break
+                      } uni.showToast({
+                    title: "服务请求异常，请稍后重试",
+                    icon: null
+                  }), console.log("报错" + JSON.stringify(t))
+                }))
+              }
+            }))
+          },
+          quickSend: function(t) {
+            var e = (0, c.nanoid)();
+            if ("image" == t.type) uni.previewImage({
+              urls: [t.url]
+            });
+            else if ("link" == t.type) o.$webView.open(t.title, t.url, !1);
+            else if ("search" == t.type) this.chatContentList.push({
+              id: 0,
+              text: t.title,
+              currentTime: getApp().dateToYYMMDDHHMMSS(),
+              state: 0,
+              type: 1,
+              questionId: t.id,
+              uuid: e
+            }), this.sendQuestionMsg("", t.id, e);
+            else if ("switch" == t.type) {
+              this.chatContentList.push({
+                id: 0,
+                text: t.title,
+                currentTime: getApp().dateToYYMMDDHHMMSS(),
+                state: 0,
+                type: 2,
+                uuid: e
+              });
+              for (var n = t.os.toUpperCase(), i = 0; i < this.serviceImgList.length; i++) {
+                var a = this.serviceImgList[i].type.toUpperCase();
+                if (n.indexOf(a) > -1) {
+                  this.getWelcomeMsg(i, e);
+                  break
+                }
+              }
+            }
+          },
+          setUniversalFailMsg: function() {
+            this.chatContentList.push({
+              id: 1,
+              text: "客服正忙，请稍后重试",
+              currentTime: getApp().dateToYYMMDDHHMMSS(),
+              imgUrl: this.serviceImgList[this.currentServiceIndex].img,
+              clickList: clickList.length > 0 ? clickList : ""
+            })
+          },
+          stripscript: function(t) {
+            for (var e = new RegExp("/^[a-zA-Z0-9-._@]{1,55}$/g"), n = "", i = 0; i < t.length; i++) n += t.substr(i, 1).replace(e, "");
+            return n
+          },
+          getTimeStamp: function() {
+            var t = this;
+            o.$funCtrl.getMulFunCfg(o.$funKey.FUN_CUSTOMERSERVICE_MSGTiME, (function(e) {
+              var n = e[o.$funKey.FUN_CUSTOMERSERVICE_MSGTiME];
+              n && 1 == n.enable && (t.timeStamp = n.time)
+            }))
+          },
+          sendQuestionMsg: function(t, e, n) {
+            var i = this,
+              a = getApp().globalData.phoneType;
+            a != this.serviceImgList[this.currentServiceIndex].type && (a = this.serviceImgList[this.currentServiceIndex].type), e ? o.$funCtrl.getMulFunCfg(o.$funKey.FUN_CUSTOMERSERVICE_ANSWER, (function(t) {
+              var c = t[o.$funKey.FUN_CUSTOMERSERVICE_ANSWER];
+              if (c && 1 == c.enable && c.url) {
+                t = {
+                  os: a,
+                  id: e
+                };
+                console.log("request data:" + t.os + "--" + t.id), r.httpRequest.post({
+                  url: c.url,
+                  data: JSON.stringify(t)
+                }).then((function(t) {
+                  if (i.chatContentList[i.chatContentList.length - 1].state = 1, t.data) {
+                    console.log(t);
+                    var e = i.resultDataAnalyze(t);
+                    i.chatContentList.push({
+                      id: 1,
+                      text: e,
+                      currentTime: getApp().dateToYYMMDDHHMMSS(),
+                      imgUrl: i.serviceImgList[i.currentServiceIndex].img
+                    })
+                  } else i.setUniversalFailMsg()
+                })).catch((function(t) {
+                  if (i.chatContentList.length >= 1)
+                    for (var e = 0; e < i.chatContentList.length; e++)
+                      if (i.chatContentList[e].uuid == n) {
+                        i.chatContentList[e].state = -1;
+                        break
+                      } uni.showToast({
+                    title: "服务请求异常，请稍后重试",
+                    icon: null
+                  }), console.log("发消息报错：" + JSON.stringify(t))
+                }))
+              }
+            })) : o.$funCtrl.getMulFunCfg(o.$funKey.FUN_CUSTOMERSERVICE_QUESTION, (function(e) {
+              var c = e[o.$funKey.FUN_CUSTOMERSERVICE_QUESTION];
+              if (c && 1 == c.enable && c.url) {
+                e = {
+                  os: a,
+                  kw: i.stripscript(i.deleteHtmlTag(t))
+                };
+                console.log("request data:" + e.os + "--" + e.kw), r.httpRequest.post({
+                  url: c.url,
+                  data: JSON.stringify(e)
+                }).then((function(t) {
+                  if (i.chatContentList[i.chatContentList.length - 1].state = 1, t.data) {
+                    console.log(t.data);
+                    var e = i.resultDataAnalyze(t);
+                    console.log("普通提问"), console.log(e), i.chatContentList[i.chatContentList.length - 1].state = 1, i.chatContentList.push({
+                      id: 1,
+                      text: e,
+                      currentTime: getApp().dateToYYMMDDHHMMSS(),
+                      imgUrl: i.serviceImgList[i.currentServiceIndex].img
+                    })
+                  } else i.setUniversalFailMsg()
+                })).catch((function(t) {
+                  for (var e = 0; e < i.chatContentList.length; e++)
+                    if (i.chatContentList[e].uuid == n) {
+                      i.chatContentList[e].state = -1;
+                      break
+                    } uni.showToast({
+                    title: "服务请求异常，请稍后重试",
+                    icon: null
+                  }), console.log("普通提问报错" + JSON.stringify(t))
+                }))
+              }
+            }))
+          },
+          publishQuestion: function(t) {
+            var e = this.terminalList[t];
+            console.log(e), console.log(t);
+            var n = (0, c.nanoid)();
+            this.chatContentList.push({
+              id: 0,
+              text: e,
+              currentTime: getApp().dateToYYMMDDHHMMSS(),
+              state: 0,
+              type: 2,
+              uuid: n
+            }), this.getWelcomeMsg(t, n)
+          },
+          sendAgain: function(t, e) {
+            this.chatContentList[t].showTime && (this.chatContentList[t + 1].showTime = !0);
+            var n = this.terminalList.indexOf(e);
+            n > -1 && (this.currentServiceIndex = n);
+            var i = this.chatContentList.splice(t, 1)[0];
+            this.chatContentList.push({
+              id: 0,
+              text: e,
+              currentTime: getApp().dateToYYMMDDHHMMSS(),
+              state: 0,
+              type: i.type,
+              uuid: i.uuid
+            }), 1 == i.type ? this.sendQuestionMsg("", i.questionId, i.uuid) : 2 == i.type ? this.getWelcomeMsg(this.currentServiceIndex, i.uuid) : this.sendQuestionMsg(e, "", i.uuid)
+          },
+          getInputValue: function(t) {
+            this.value = t.detail.value
+          },
+          submit: function() {
+            if (this.value.trim()) {
+              var t = (0, c.nanoid)();
+              this.chatContentList.push({
+                id: 0,
+                text: this.value,
+                currentTime: getApp().dateToYYMMDDHHMMSS(),
+                state: 0,
+                type: 0,
+                uuid: t
+              }), this.sendQuestionMsg(this.value, "", t), this.value = ""
+            }
+          },
+          deleteHtmlTag: function(t) {
+            return t = t.replace(/<[^>]+>|&[^>]+;/g, "").trim(), t
+          },
+          resultDataAnalyze: function(t) {
+            var e = t.data.answer;
+            e = e.replace(/\r\n/g, "<br/>"), e = e.replace(/\n/g, "<br/>");
+            var n = e.match(/\{[^\}]+\}/g);
+            if (null != n && void 0 != n && void 0 != n.length && n.length > 0)
+              for (var i = 0; i < n.length; i++) {
+                var a = n[i];
+                if (this.isJson(a)) {
+                  var c = JSON.parse(a),
+                    o = encodeURI(a);
+                  if ("image" == c.type) {
+                    var r = '<img  class="rich_img" content="'.concat(o, '"  src="').concat(item.url, '"  mode="widthFix"></img>');
+                    e = e.replace(a, r)
+                  } else {
+                    var u = '<a  content="'.concat(o, '" class="rich_text">').concat(c.title, "</a>");
+                    e = e.replace(a, u)
+                  }
+                }
+              }
+            return (0, s.default)(e)
+          },
+          isJson: function(t) {
+            if ("string" == typeof t) try {
+              JSON.parse(t);
+              return !0
+            } catch (e) {}
+            return !1
+          }
+        }
+      }
+    },
+    "651e": function(t, e, n) {
+      "use strict";
+      n.d(e, "b", (function() {
+        return i
+      })), n.d(e, "c", (function() {
+        return a
+      })), n.d(e, "a", (function() {}));
+      var i = function() {
+          var t = this,
+            e = t.$createElement,
+            n = t._self._c || e;
+          return n("v-uni-view", {
+            staticClass: "wrapper"
+          }, [t._t("loadSuccess"), "loading" == t.state ? n("v-uni-view", {
+            staticClass: "loading_info"
+          }, [t._v("正在加载中...")]) : "loadFail" == t.state ? n("v-uni-view", {
+            staticClass: "loadFail_info"
+          }, [n("v-uni-view", {
+            staticClass: "info"
+          }, [n("v-uni-view", [t._v(t._s(t.loadFaliMessage))]), n("v-uni-button", {
+            on: {
+              click: function(e) {
+                arguments[0] = e = t.$handleEvent(e), t.retry.apply(void 0, arguments)
+              }
+            }
+          }, [t._v("请重试")])], 1)], 1) : t._e()], 2)
+        },
+        a = []
+    },
+    "6ea3": function(t, e, n) {
+      "use strict";
+      n("7a82"), Object.defineProperty(e, "__esModule", {
+        value: !0
+      }), e.default = void 0;
+      e.default = {
+        name: "template-page",
+        props: {
+          title: {
+            type: String,
+            default: ""
+          },
+          color: {
+            type: String,
+            default: ""
+          },
+          state: {
+            type: String,
+            default: "loading"
+          },
+          retry: {
+            type: Function,
+            default: function() {}
+          },
+          loadFaliMessage: {
+            type: String,
+            default: ""
+          }
+        },
+        data: function() {
+          return {}
+        },
+        onLoad: function() {
+          console.log("刷新了")
+        },
+        methods: {}
+      }
+    },
+    "7c99": function(t, e, n) {
+      var i = n("4bad");
+      e = i(!1), e.push([t.i, '@charset "UTF-8";\n/**\n * 这里是uni-app内置的常用样式变量\n *\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\n *\n */\n/**\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\n *\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\n */\n/* 颜色变量 */\n/* 行为相关颜色 */\n/* 文字基本颜色 */\n/* 背景颜色 */\n/* 边框颜色 */\n/* 尺寸变量 */\n/* 文字尺寸 */\n/* 图片尺寸 */\n/* Border Radius */\n/* 水平间距 */\n/* 垂直间距 */\n/* 透明度 */\n/* 文章场景相关 */\n/*绝对定位-左上角*/\n/*绝对定位-左下角*/\n/*绝对定位-右上角*/\n/*绝对定位-右下角*/\n/*绝对定位-垂直水平居中*/\n/*绝对定位-底部水平居中*/\n/*绝对定位-顶部水平居中*/\n/*固定定位 元素居中*/\n/*粘性定位*/\n/*固定定位*/\n/*-------flexible box--------*/\n/*水平排列*/\n/*水平排列允许换行*/\n/*水平排列 上下居中*/\n/*左右顶头*/\n/*左右顶头 上下居中*/\n/*水平垂直居中*/\n/*水平居中*/\n/*列居中*/\n/*上下顶边*/\n/*-----字号------*/\n/*文字超出省略号*/\n/*背景*/\n/*背景图*/\n/*边框*/\n/*底部边框*/\n/*顶部边框*/\n/*左侧边框*/\n/*右侧边框*/\n/*四边边框*/\n/*过渡动画*/[data-v-4aa361d3] .uni-nav-bar-text{font-size:%?36?%}.wrapper[data-v-4aa361d3]{min-height:100vh;position:relative}.loading_info[data-v-4aa361d3],\n.loadFail_info[data-v-4aa361d3]{position:absolute;top:0;font-size:%?36?%;width:100vw;height:100vh;background-color:#fff;display:flex;justify-content:center;align-items:center;color:#000;z-index:99}.loading_info .info[data-v-4aa361d3],\n.loadFail_info .info[data-v-4aa361d3]{text-align:center}.loading_info .info uni-button[data-v-4aa361d3],\n.loadFail_info .info uni-button[data-v-4aa361d3]{margin-top:%?10?%;width:%?200?%}.ddddd[data-v-4aa361d3]{background-color:#000}', ""]), t.exports = e
+    },
+    8151: function(t, e, n) {
+      var i = n("4bad");
+      e = i(!1), e.push([t.i, '@charset "UTF-8";\n/**\n * 这里是uni-app内置的常用样式变量\n *\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\n *\n */\n/**\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\n *\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\n */\n/* 颜色变量 */\n/* 行为相关颜色 */\n/* 文字基本颜色 */\n/* 背景颜色 */\n/* 边框颜色 */\n/* 尺寸变量 */\n/* 文字尺寸 */\n/* 图片尺寸 */\n/* Border Radius */\n/* 水平间距 */\n/* 垂直间距 */\n/* 透明度 */\n/* 文章场景相关 */\n/*绝对定位-左上角*/\n/*绝对定位-左下角*/\n/*绝对定位-右上角*/\n/*绝对定位-右下角*/\n/*绝对定位-垂直水平居中*/\n/*绝对定位-底部水平居中*/\n/*绝对定位-顶部水平居中*/\n/*固定定位 元素居中*/\n/*粘性定位*/\n/*固定定位*/\n/*-------flexible box--------*/\n/*水平排列*/\n/*水平排列允许换行*/\n/*水平排列 上下居中*/\n/*左右顶头*/\n/*左右顶头 上下居中*/\n/*水平垂直居中*/\n/*水平居中*/\n/*列居中*/\n/*上下顶边*/\n/*-----字号------*/\n/*文字超出省略号*/\n/*背景*/\n/*背景图*/\n/*边框*/\n/*底部边框*/\n/*顶部边框*/\n/*左侧边框*/\n/*右侧边框*/\n/*四边边框*/\n/*过渡动画*/[data-v-287bf2c4] .uni-list-item__container{background-color:#f1f1f1}.container[data-v-287bf2c4]{position:absolute;width:100%;height:auto!important;overflow:hidden;background-color:#f1f1f1}.container .main_container[data-v-287bf2c4]{padding-bottom:%?175?%;box-sizing:initial;overflow-y:auto}.container .main_container #chat_bottom[data-v-287bf2c4]{width:100vw}.container .chat[data-v-287bf2c4]{background-color:#f1f1f1;width:100%}.container .chat .chat_time[data-v-287bf2c4]{font-size:%?24?%;text-align:center;color:#999;margin-bottom:%?10?%}.container .chat .chat_content .chat_content_user[data-v-287bf2c4]{width:100%;display:flex;justify-content:flex-end;align-items:center}.container .chat .chat_content .chat_content_user .heard_img[data-v-287bf2c4]{width:%?90?%;height:%?90?%;align-self:start}.container .chat .chat_content .chat_content_user .heard_text[data-v-287bf2c4]{background-color:#42a5f5;border-radius:%?10?%;margin-right:%?20?%;max-width:65%;padding:%?15?% %?15?%;position:relative;font-size:%?34?%;color:#fff;white-space:pre-wrap}.container .chat .chat_content .chat_content_user .heard_text[data-v-287bf2c4]:before{content:"";width:0;height:0;border:%?15?% solid transparent;border-left-color:#42a5f5;position:absolute;right:%?-28?%;top:%?23?%}.container .chat .chat_content .chat_content_service[data-v-287bf2c4]{width:100%;display:flex;justify-content:flex-start;align-items:center}.container .chat .chat_content .chat_content_service .heard_img[data-v-287bf2c4]{width:%?90?%;height:%?90?%;align-self:start}.container .chat .chat_content .chat_content_service .heard_text[data-v-287bf2c4]{background-color:#fff;border-radius:%?10?%;margin-left:%?20?%;max-width:65%;padding:%?15?% %?15?%;position:relative;font-size:%?34?%}.container .chat .chat_content .chat_content_service .heard_text[data-v-287bf2c4]:before{content:"";width:0;height:0;border:%?15?% solid transparent;border-right-color:#fff;position:absolute;left:%?-28?%;top:%?23?%}.container .chat .chat_content .chat_content_service .heard_text .answer_about[data-v-287bf2c4]{color:#64b5f6;text-decoration:underline;width:100%}.container .chat .chat_content .chat_content_service .heard_text .answer_about uni-image[data-v-287bf2c4]{width:100%}.container .chat .chat_content .chat_content_service .heard_text .answer_about[data-v-287bf2c4]:active{top:%?2?%;color:#428cf5}.container .chat .chat_state[data-v-287bf2c4]{width:100%;text-align:center;font-size:%?20?%;position:relative;top:%?5?%;color:#999}.container .chat .chat_state .chat_state_fail[data-v-287bf2c4]{display:inline-block;color:#42a5f5;text-decoration:underline}.container .input_container[data-v-287bf2c4]{position:fixed;left:0;bottom:0;border:0;width:100%;background-color:#f1f1f1}.container .input_container .top[data-v-287bf2c4]{position:relative;margin-left:%?20?%;width:100%;display:flex;align-items:center;padding-top:%?10?%;padding-bottom:%?10?%}.container .input_container .top .top_title[data-v-287bf2c4]{font-size:%?24?%;color:#333}.container .input_container .top .top_btn[data-v-287bf2c4]{margin:%?0?% %?10?%;padding:%?0?% %?20?%;height:%?50?%;line-height:%?50?%;font-size:%?24?%;text-align:center;color:#333;background:#f4f4f6;border-radius:%?25?%;border:%?1?% solid #ccc}.container .input_container .bottom[data-v-287bf2c4]{position:relative;padding:%?15?% %?20?%;box-sizing:initial;left:0;right:0;background-color:#f4f4f6;border-top:#dcdcdc %?1?% solid;display:flex;align-items:center;justify-content:space-between}.container .input_container .bottom .input[data-v-287bf2c4]{margin-right:%?10?%;padding-left:%?10?%;box-sizing:initial;flex:1;height:%?70?%;background:#fff!important;font-size:%?28?%;border-radius:%?6?%;border:%?1?% solid #dcdcdc}.container .input_container .bottom .submit[data-v-287bf2c4]{width:%?70?%;height:%?70?%}', ""]), t.exports = e
+    },
+    "962f": function(t, e, n) {
+      "use strict";
+      n.r(e);
+      var i = n("33ef"),
+        a = n("2051");
+      for (var c in a)["default"].indexOf(c) < 0 && function(t) {
+        n.d(e, t, (function() {
+          return a[t]
+        }))
+      }(c);
+      n("3696"), n("4f39");
+      var o = n("f0c5"),
+        r = Object(o["a"])(a["default"], i["b"], i["c"], !1, null, "287bf2c4", null, !1, i["a"], void 0);
+      e["default"] = r.exports
+    },
+    d29d: function(t, e, n) {
+      "use strict";
+      n.r(e);
+      var i = n("651e"),
+        a = n("20f7");
+      for (var c in a)["default"].indexOf(c) < 0 && function(t) {
+        n.d(e, t, (function() {
+          return a[t]
+        }))
+      }(c);
+      n("3dab");
+      var o = n("f0c5"),
+        r = Object(o["a"])(a["default"], i["b"], i["c"], !1, null, "4aa361d3", null, !1, i["a"], void 0);
+      e["default"] = r.exports
+    },
+    e1bd: function(t, e, n) {
+      "use strict";
+      n.r(e), n.d(e, "nanoid", (function() {
+        return r
+      })), n.d(e, "customAlphabet", (function() {
+        return o
+      })), n.d(e, "customRandom", (function() {
+        return c
+      })), n.d(e, "urlAlphabet", (function() {
+        return i
+      })), n.d(e, "random", (function() {
+        return a
+      }));
+      let i = "useandom-26T198340PX75pxJACKVERYMINDBUSHWOLF_GQZbfghjklqvwyzrict",
+        a = t => crypto.getRandomValues(new Uint8Array(t)),
+        c = (t, e, n) => {
+          let i = (2 << Math.log(t.length - 1) / Math.LN2) - 1,
+            a = -~(1.6 * i * e / t.length);
+          return (c = e) => {
+            let o = "";
+            while (1) {
+              let e = n(a),
+                r = a;
+              while (r--)
+                if (o += t[e[r] & i] || "", o.length === c) return o
+            }
+          }
+        },
+        o = (t, e = 21) => c(t, e, a),
+        r = (t = 21) => crypto.getRandomValues(new Uint8Array(t)).reduce((t, e) => (e &= 63, t += e < 36 ? e.toString(36) : e < 62 ? (e - 26).toString(36).toUpperCase() : e > 62 ? "-" : "_", t), "")
+    },
+    ea81: function(t, e, n) {
+      var i = n("7c99");
+      i.__esModule && (i = i.default), "string" === typeof i && (i = [
+        [t.i, i, ""]
+      ]), i.locals && (t.exports = i.locals);
+      var a = n("4f06").default;
+      a("4326e34c", i, !0, {
+        sourceMap: !1,
+        shadowMode: !1
+      })
+    },
+    fe49: function(t, e) {
+      t.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQyIDc5LjE2MDkyNCwgMjAxNy8wNy8xMy0wMTowNjozOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDowNEZFMkVGRDUxMDAxMUU5OEMzNTlDM0MzMThEM0NDNyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDowNEZFMkVGRTUxMDAxMUU5OEMzNTlDM0MzMThEM0NDNyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjA0RkUyRUZCNTEwMDExRTk4QzM1OUMzQzMxOEQzQ0M3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjA0RkUyRUZDNTEwMDExRTk4QzM1OUMzQzMxOEQzQ0M3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+RHL4JgAACkxJREFUeNrkndlvVUUc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"
+    }
+  }
+]);

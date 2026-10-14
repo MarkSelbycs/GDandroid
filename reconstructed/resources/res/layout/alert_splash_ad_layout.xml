@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#fff" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/ad_img" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/ad_tip_rrl" android:background="@drawable/time_text_bg" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="60.0dp" android:layout_marginRight="15.0dp" android:layout_alignParentRight="true">
+        <TextView android:textSize="18.0dp" android:textColor="#fff" android:layout_gravity="center_vertical" android:id="@id/ad_time_tv" android:layout_width="10.0dp" android:layout_height="wrap_content" android:layout_marginLeft="10.0dp" android:layout_marginTop="5.0dp" android:layout_marginRight="5.0dp" android:layout_marginBottom="5.0dp" android:text="0" android:layout_weight="1.0" />
+        <TextView android:textSize="18.0dp" android:textColor="#fff" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:layout_marginTop="5.0dp" android:layout_marginRight="10.0dp" android:layout_marginBottom="5.0dp" android:text="@string/skip" android:layout_weight="1.0" />
+    </LinearLayout>
+</RelativeLayout>

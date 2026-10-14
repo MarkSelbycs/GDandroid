@@ -1,0 +1,13 @@
+version: 3.0.1
+apkFileName: v2104_unpacked.apk
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: 28
+  targetSdkVersion: 30
+versionInfo:
+  versionCode: 2104
+  versionName: 4.0.2104.25102201
+resourcesInfo:
+  packageId: 127

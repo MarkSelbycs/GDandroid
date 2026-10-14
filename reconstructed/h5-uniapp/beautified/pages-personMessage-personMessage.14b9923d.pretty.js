@@ -1,0 +1,803 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([
+  ["pages-personMessage-personMessage"], {
+    1698: function(t, e, n) {
+      "use strict";
+      n("7a82"), Object.defineProperty(e, "__esModule", {
+        value: !0
+      }), e.PluginApi = void 0, n("c975");
+      var i = uni.requireNativePlugin("PortalMananger"),
+        a = e.PluginApi = {
+          coolMethod: function(t, e, n) {
+            (void 0 == n || void 0 != n && "function" != typeof n) && (n = function() {});
+            var a = {
+              action: t,
+              args: e
+            };
+            i.coolMethod(a, n)
+          }
+        };
+
+      function s() {
+        uni.addInterceptor("showModal", {
+          invoke: function(t) {
+            var e = null,
+              n = {};
+            for (var i in t) {
+              var s = t[i];
+              void 0 != s && ("function" == typeof s ? e = s : n[i] = s)
+            }
+            return a.coolMethod("showModal", [n], (function(t) {
+              e && e(t)
+            })), !1
+          }
+        }), uni.addInterceptor("showToast", {
+          invoke: function(t) {
+            return a.coolMethod("showToast", [t]), !1
+          }
+        }), uni.addInterceptor("showLoading", {
+          invoke: function(t) {
+            return a.coolMethod("showLoading", [t]), !1
+          }
+        }), uni.addInterceptor("hideLoading", {
+          invoke: function(t) {
+            return a.coolMethod("hideLoading", []), !1
+          }
+        })
+      }
+      uni.addInterceptor("request", {
+        invoke: function(t) {
+          return !0
+        }
+      }), getApp().globalData.phoneType ? "android" === getApp().globalData.phoneType.toLowerCase() ? s() : uni.addInterceptor("showToast", {
+        invoke: function(t) {
+          t.position = "bottom"
+        }
+      }) : uni.getSystemInfo({
+        success: function(t) {
+          "android" == t.osName ? s() : uni.addInterceptor("showToast", {
+            invoke: function(t) {
+              t.position = "bottom"
+            }
+          })
+        }
+      })
+    },
+    "1c8f": function(t, e, n) {
+      "use strict";
+      var i = n("e237"),
+        a = n.n(i);
+      a.a
+    },
+    "20f7": function(t, e, n) {
+      "use strict";
+      n.r(e);
+      var i = n("6ea3"),
+        a = n.n(i);
+      for (var s in i)["default"].indexOf(s) < 0 && function(t) {
+        n.d(e, t, (function() {
+          return i[t]
+        }))
+      }(s);
+      e["default"] = a.a
+    },
+    2909: function(t, e, n) {
+      "use strict";
+      n("7a82"), Object.defineProperty(e, "__esModule", {
+        value: !0
+      }), e.default = function(t) {
+        return (0, i.default)(t) || (0, a.default)(t) || (0, s.default)(t) || (0, o.default)()
+      };
+      var i = r(n("6005")),
+        a = r(n("db90")),
+        s = r(n("06c5")),
+        o = r(n("3427"));
+
+      function r(t) {
+        return t && t.__esModule ? t : {
+          default: t
+        }
+      }
+    },
+    3427: function(t, e, n) {
+      "use strict";
+      n("7a82"), Object.defineProperty(e, "__esModule", {
+        value: !0
+      }), e.default = function() {
+        throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
+      }, n("d9e2"), n("d401")
+    },
+    "3dab": function(t, e, n) {
+      "use strict";
+      var i = n("ea81"),
+        a = n.n(i);
+      a.a
+    },
+    "41aa": function(t, e, n) {
+      "use strict";
+      n.r(e);
+      var i = n("6eab"),
+        a = n("828b");
+      for (var s in a)["default"].indexOf(s) < 0 && function(t) {
+        n.d(e, t, (function() {
+          return a[t]
+        }))
+      }(s);
+      n("1c8f");
+      var o = n("f0c5"),
+        r = Object(o["a"])(a["default"], i["b"], i["c"], !1, null, "331973e9", null, !1, i["a"], void 0);
+      e["default"] = r.exports
+    },
+    "4d53": function(t, e, n) {
+      var i = n("4bad");
+      e = i(!1), e.push([t.i, '@charset "UTF-8";\n/**\n * 这里是uni-app内置的常用样式变量\n *\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\n *\n */\n/**\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\n *\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\n */\n/* 颜色变量 */\n/* 行为相关颜色 */\n/* 文字基本颜色 */\n/* 背景颜色 */\n/* 边框颜色 */\n/* 尺寸变量 */\n/* 文字尺寸 */\n/* 图片尺寸 */\n/* Border Radius */\n/* 水平间距 */\n/* 垂直间距 */\n/* 透明度 */\n/* 文章场景相关 */\n/*绝对定位-左上角*/\n/*绝对定位-左下角*/\n/*绝对定位-右上角*/\n/*绝对定位-右下角*/\n/*绝对定位-垂直水平居中*/\n/*绝对定位-底部水平居中*/\n/*绝对定位-顶部水平居中*/\n/*固定定位 元素居中*/\n/*粘性定位*/\n/*固定定位*/\n/*-------flexible box--------*/\n/*水平排列*/\n/*水平排列允许换行*/\n/*水平排列 上下居中*/\n/*左右顶头*/\n/*左右顶头 上下居中*/\n/*水平垂直居中*/\n/*水平居中*/\n/*列居中*/\n/*上下顶边*/\n/*-----字号------*/\n/*文字超出省略号*/\n/*背景*/\n/*背景图*/\n/*边框*/\n/*底部边框*/\n/*顶部边框*/\n/*左侧边框*/\n/*右侧边框*/\n/*四边边框*/\n/*过渡动画*/.segmented-control[data-v-331973e9]{display:flex;box-sizing:border-box;flex-direction:row;height:%?36?%;overflow:hidden;cursor:pointer}.segmented-control__item[data-v-331973e9]{display:inline-flex;box-sizing:border-box;position:relative;flex:1;justify-content:center;align-items:center}.segmented-control__item--button[data-v-331973e9]{border-style:solid;border-top-width:%?1?%;border-bottom-width:%?1?%;border-right-width:%?1?%;border-left-width:0}.segmented-control__item--button--first[data-v-331973e9]{border-left-width:%?1?%;border-top-left-radius:%?5?%;border-bottom-left-radius:%?5?%}.segmented-control__item--button--last[data-v-331973e9]{border-top-right-radius:%?5?%;border-bottom-right-radius:%?5?%}.segmented-control__item--text[data-v-331973e9]{border-bottom-style:solid;border-bottom-width:%?2?%;padding:%?6?% 0}.segmented-control__text[data-v-331973e9]{font-size:%?14?%;line-height:%?20?%;text-align:center}', ""]), t.exports = e
+    },
+    6005: function(t, e, n) {
+      "use strict";
+      n("7a82"), Object.defineProperty(e, "__esModule", {
+        value: !0
+      }), e.default = function(t) {
+        if (Array.isArray(t)) return (0, i.default)(t)
+      };
+      var i = function(t) {
+        return t && t.__esModule ? t : {
+          default: t
+        }
+      }(n("6b75"))
+    },
+    "651e": function(t, e, n) {
+      "use strict";
+      n.d(e, "b", (function() {
+        return i
+      })), n.d(e, "c", (function() {
+        return a
+      })), n.d(e, "a", (function() {}));
+      var i = function() {
+          var t = this,
+            e = t.$createElement,
+            n = t._self._c || e;
+          return n("v-uni-view", {
+            staticClass: "wrapper"
+          }, [t._t("loadSuccess"), "loading" == t.state ? n("v-uni-view", {
+            staticClass: "loading_info"
+          }, [t._v("正在加载中...")]) : "loadFail" == t.state ? n("v-uni-view", {
+            staticClass: "loadFail_info"
+          }, [n("v-uni-view", {
+            staticClass: "info"
+          }, [n("v-uni-view", [t._v(t._s(t.loadFaliMessage))]), n("v-uni-button", {
+            on: {
+              click: function(e) {
+                arguments[0] = e = t.$handleEvent(e), t.retry.apply(void 0, arguments)
+              }
+            }
+          }, [t._v("请重试")])], 1)], 1) : t._e()], 2)
+        },
+        a = []
+    },
+    "6ea3": function(t, e, n) {
+      "use strict";
+      n("7a82"), Object.defineProperty(e, "__esModule", {
+        value: !0
+      }), e.default = void 0;
+      e.default = {
+        name: "template-page",
+        props: {
+          title: {
+            type: String,
+            default: ""
+          },
+          color: {
+            type: String,
+            default: ""
+          },
+          state: {
+            type: String,
+            default: "loading"
+          },
+          retry: {
+            type: Function,
+            default: function() {}
+          },
+          loadFaliMessage: {
+            type: String,
+            default: ""
+          }
+        },
+        data: function() {
+          return {}
+        },
+        onLoad: function() {
+          console.log("刷新了")
+        },
+        methods: {}
+      }
+    },
+    "6eab": function(t, e, n) {
+      "use strict";
+      n.d(e, "b", (function() {
+        return i
+      })), n.d(e, "c", (function() {
+        return a
+      })), n.d(e, "a", (function() {}));
+      var i = function() {
+          var t = this,
+            e = t.$createElement,
+            n = t._self._c || e;
+          return n("v-uni-view", {
+            staticClass: "segmented-control",
+            class: ["text" === t.styleType ? "segmented-control--text" : "segmented-control--button"],
+            style: {
+              borderColor: "text" === t.styleType ? "" : t.activeColor
+            }
+          }, t._l(t.values, (function(e, i) {
+            return n("v-uni-view", {
+              key: i,
+              staticClass: "segmented-control__item",
+              class: ["text" === t.styleType ? "" : "segmented-control__item--button", i === t.currentIndex && "button" === t.styleType ? "segmented-control__item--button--active" : "", 0 === i && "button" === t.styleType ? "segmented-control__item--button--first" : "", i === t.values.length - 1 && "button" === t.styleType ? "segmented-control__item--button--last" : ""],
+              style: {
+                backgroundColor: i === t.currentIndex && "button" === t.styleType ? t.activeColor : "",
+                borderColor: i === t.currentIndex && "text" === t.styleType || "button" === t.styleType ? t.activeColor : "transparent"
+              },
+              on: {
+                click: function(e) {
+                  arguments[0] = e = t.$handleEvent(e), t._onClick(i)
+                }
+              }
+            }, [n("v-uni-view", [n("v-uni-text", {
+              staticClass: "segmented-control__text",
+              class: "text" === t.styleType && i === t.currentIndex ? "segmented-control__item--text" : "",
+              style: {
+                color: i === t.currentIndex ? "text" === t.styleType ? t.activeColor : "#fff" : "text" === t.styleType ? "#000" : t.activeColor
+              }
+            }, [t._v(t._s(e))])], 1)], 1)
+          })), 1)
+        },
+        a = []
+    },
+    "7c99": function(t, e, n) {
+      var i = n("4bad");
+      e = i(!1), e.push([t.i, '@charset "UTF-8";\n/**\n * 这里是uni-app内置的常用样式变量\n *\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\n *\n */\n/**\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\n *\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\n */\n/* 颜色变量 */\n/* 行为相关颜色 */\n/* 文字基本颜色 */\n/* 背景颜色 */\n/* 边框颜色 */\n/* 尺寸变量 */\n/* 文字尺寸 */\n/* 图片尺寸 */\n/* Border Radius */\n/* 水平间距 */\n/* 垂直间距 */\n/* 透明度 */\n/* 文章场景相关 */\n/*绝对定位-左上角*/\n/*绝对定位-左下角*/\n/*绝对定位-右上角*/\n/*绝对定位-右下角*/\n/*绝对定位-垂直水平居中*/\n/*绝对定位-底部水平居中*/\n/*绝对定位-顶部水平居中*/\n/*固定定位 元素居中*/\n/*粘性定位*/\n/*固定定位*/\n/*-------flexible box--------*/\n/*水平排列*/\n/*水平排列允许换行*/\n/*水平排列 上下居中*/\n/*左右顶头*/\n/*左右顶头 上下居中*/\n/*水平垂直居中*/\n/*水平居中*/\n/*列居中*/\n/*上下顶边*/\n/*-----字号------*/\n/*文字超出省略号*/\n/*背景*/\n/*背景图*/\n/*边框*/\n/*底部边框*/\n/*顶部边框*/\n/*左侧边框*/\n/*右侧边框*/\n/*四边边框*/\n/*过渡动画*/[data-v-4aa361d3] .uni-nav-bar-text{font-size:%?36?%}.wrapper[data-v-4aa361d3]{min-height:100vh;position:relative}.loading_info[data-v-4aa361d3],\n.loadFail_info[data-v-4aa361d3]{position:absolute;top:0;font-size:%?36?%;width:100vw;height:100vh;background-color:#fff;display:flex;justify-content:center;align-items:center;color:#000;z-index:99}.loading_info .info[data-v-4aa361d3],\n.loadFail_info .info[data-v-4aa361d3]{text-align:center}.loading_info .info uni-button[data-v-4aa361d3],\n.loadFail_info .info uni-button[data-v-4aa361d3]{margin-top:%?10?%;width:%?200?%}.ddddd[data-v-4aa361d3]{background-color:#000}', ""]), t.exports = e
+    },
+    "828b": function(t, e, n) {
+      "use strict";
+      n.r(e);
+      var i = n("cc87"),
+        a = n.n(i);
+      for (var s in i)["default"].indexOf(s) < 0 && function(t) {
+        n.d(e, t, (function() {
+          return i[t]
+        }))
+      }(s);
+      e["default"] = a.a
+    },
+    "939c": function(t, e, n) {
+      "use strict";
+      var i = n("cbaa"),
+        a = n.n(i);
+      a.a
+    },
+    ab79: function(t, e, n) {
+      "use strict";
+      n.d(e, "b", (function() {
+        return a
+      })), n.d(e, "c", (function() {
+        return s
+      })), n.d(e, "a", (function() {
+        return i
+      }));
+      var i = {
+          templatePage: n("d29d").default,
+          uniSegmentedControl: n("41aa").default
+        },
+        a = function() {
+          var t = this,
+            e = t.$createElement,
+            n = t._self._c || e;
+          return n("template-page", {
+            staticClass: "container",
+            attrs: {
+              state: t.pageState,
+              retry: t.retry
+            },
+            scopedSlots: t._u([{
+              key: "loadSuccess",
+              fn: function() {
+                return [n("v-uni-view", {
+                  staticClass: "tip_container"
+                }, [t._v(t._s(t.appName) + "尽全力保护您的个人安全，并保障您的个人信息处理过程中相关权益。为了向您提供" + t._s(t.appName) + "的基本功能及附加功能，我们需要收集您在使用服务时通过您主动授权/提供等方式的个人信息。以下我们将逐一说明收集情况，方便您快速查阅。")]), n("v-uni-view", {
+                  staticClass: "user_container"
+                }, [n("v-uni-view", {
+                  staticClass: "title"
+                }, [t._v("用户基本信息")]), n("v-uni-view", {
+                  staticClass: "table_container"
+                }, [n("v-uni-view", {
+                  staticClass: "table_title"
+                }, [t._v("账号")]), n("v-uni-view", {
+                  staticClass: "table"
+                }, [n("v-uni-view", {
+                  staticClass: "list"
+                }, [n("v-uni-view", {
+                  staticClass: "list_left"
+                }, [t._v("使用目的")]), n("v-uni-view", {
+                  staticClass: "list_right"
+                }, [t._v("用于拨号上网")])], 1), n("v-uni-view", {
+                  staticClass: "list"
+                }, [n("v-uni-view", {
+                  staticClass: "list_left"
+                }, [t._v("使用场景")]), n("v-uni-view", {
+                  staticClass: "list_right"
+                }, [t._v("用户登录")])], 1), n("v-uni-view", {
+                  staticClass: "list"
+                }, [n("v-uni-view", {
+                  staticClass: "list_left"
+                }, [t._v("收集情况")]), n("v-uni-view", {
+                  staticClass: "list_right"
+                }, [t._v("用户提供，已收集" + t._s(t.contentArr[0].num) + "条")])], 1), n("v-uni-view", {
+                  staticClass: "list"
+                }, [n("v-uni-view", {
+                  staticClass: "list_left"
+                }, [t._v("信息内容")]), n("v-uni-view", {
+                  staticClass: "list_right"
+                }, [t._v(t._s(t.contentArr[0].content))])], 1)], 1)], 1)], 1), n("v-uni-view", {
+                  staticClass: "device_container"
+                }, [n("v-uni-view", {
+                  staticClass: "title"
+                }, [n("span", [t._v("设备属性信息")]), n("uni-segmented-control", {
+                  attrs: {
+                    values: t.timeArr,
+                    styleType: "button",
+                    activeColor: "#42a5f5"
+                  },
+                  on: {
+                    clickItem: function(e) {
+                      arguments[0] = e = t.$handleEvent(e), t.onClickDevice.apply(void 0, arguments)
+                    }
+                  }
+                })], 1), n("v-uni-view", {
+                  staticClass: "table_container"
+                }, [n("v-uni-view", {
+                  staticClass: "table_title"
+                }, [t._v("网络设备硬件地址（MAC）")]), n("v-uni-view", {
+                  staticClass: "table"
+                }, [n("v-uni-view", {
+                  staticClass: "list"
+                }, [n("v-uni-view", {
+                  staticClass: "list_left"
+                }, [t._v("使用目的")]), n("v-uni-view", {
+                  staticClass: "list_right"
+                }, [t._v("用于识别设备，进行网络检测、拨号上网、安全保障等功能")])], 1), n("v-uni-view", {
+                  staticClass: "list"
+                }, [n("v-uni-view", {
+                  staticClass: "list_left"
+                }, [t._v("使用场景")]), n("v-uni-view", {
+                  staticClass: "list_right"
+                }, [t._v("使用APP过程中")])], 1), n("v-uni-view", {
+                  staticClass: "list"
+                }, [n("v-uni-view", {
+                  staticClass: "list_left"
+                }, [t._v("收集情况")]), n("v-uni-view", {
+                  staticClass: "list_right"
+                }, [t._v("系统记录，已收集" + t._s(t.contentArr[2].num) + "条")])], 1), n("v-uni-view", {
+                  staticClass: "list"
+                }, [n("v-uni-view", {
+                  staticClass: "list_left"
+                }, [t._v("信息内容")]), n("v-uni-view", {
+                  staticClass: "list_right"
+                }, [t._v(t._s(t.contentArr[2].content))])], 1)], 1), n("v-uni-view", {
+                  staticClass: "table_title"
+                }, [t._v("终端IP")]), n("div", {
+                  staticClass: "table"
+                }, [n("div", {
+                  staticClass: "list"
+                }, [n("div", {
+                  staticClass: "list_left"
+                }, [t._v("使用目的")]), n("div", {
+                  staticClass: "list_right"
+                }, [t._v("用于识别设备，进行信息推送、网络检测、拨号上网、安全保障等功能")])]), n("div", {
+                  staticClass: "list"
+                }, [n("div", {
+                  staticClass: "list_left"
+                }, [t._v("使用场景")]), n("div", {
+                  staticClass: "list_right"
+                }, [t._v("使用APP过程中")])]), n("div", {
+                  staticClass: "list"
+                }, [n("div", {
+                  staticClass: "list_left"
+                }, [t._v("收集情况")]), n("div", {
+                  staticClass: "list_right",
+                  attrs: {
+                    id: "device_ip_record"
+                  }
+                }, [t._v("系统记录，已收集" + t._s(t.contentArr[3].num) + "条")])]), n("div", {
+                  staticClass: "list"
+                }, [n("div", {
+                  staticClass: "list_left"
+                }, [t._v("信息内容")]), n("div", {
+                  staticClass: "list_right",
+                  attrs: {
+                    id: "device_ip_id"
+                  }
+                }, [t._v(t._s(t.contentArr[3].content))])])]), n("v-uni-view", {
+                  staticClass: "table_title"
+                }, [t._v("设备型号（品牌机型）")]), n("div", {
+                  staticClass: "table"
+                }, [n("div", {
+                  staticClass: "list"
+                }, [n("div", {
+                  staticClass: "list_left"
+                }, [t._v("使用目的")]), n("div", {
+                  staticClass: "list_right"
+                }, [t._v("用于机型适配与异常排查")])]), n("div", {
+                  staticClass: "list"
+                }, [n("div", {
+                  staticClass: "list_left"
+                }, [t._v("使用场景")]), n("div", {
+                  staticClass: "list_right"
+                }, [t._v("应用启动或用户每次分享日志时")])]), n("div", {
+                  staticClass: "list"
+                }, [n("div", {
+                  staticClass: "list_left"
+                }, [t._v("收集情况")]), n("div", {
+                  staticClass: "list_right",
+                  attrs: {
+                    id: "device_type_record"
+                  }
+                }, [t._v("系统记录，已收集" + t._s(t.contentArr[4].num) + "条")])]), n("div", {
+                  staticClass: "list"
+                }, [n("div", {
+                  staticClass: "list_left"
+                }, [t._v("信息内容")]), n("div", {
+                  staticClass: "list_right",
+                  attrs: {
+                    id: "device_type_id"
+                  }
+                }, [t._v(t._s(t.contentArr[4].content))])])]), n("v-uni-view", {
+                  staticClass: "table_title"
+                }, [t._v("设备系统版本")]), n("div", {
+                  staticClass: "table"
+                }, [n("div", {
+                  staticClass: "list"
+                }, [n("div", {
+                  staticClass: "list_left"
+                }, [t._v("使用目的")]), n("div", {
+                  staticClass: "list_right"
+                }, [t._v("用于系统版本适配与异常排查")])]), n("div", {
+                  staticClass: "list"
+                }, [n("div", {
+                  staticClass: "list_left"
+                }, [t._v("使用场景")]), n("div", {
+                  staticClass: "list_right"
+                }, [t._v("应用启动或用户每次分享日志时")])]), n("div", {
+                  staticClass: "list"
+                }, [n("div", {
+                  staticClass: "list_left"
+                }, [t._v("收集情况")]), n("div", {
+                  staticClass: "list_right",
+                  attrs: {
+                    id: "device_version_record"
+                  }
+                }, [t._v("系统记录，已收集" + t._s(t.contentArr[5].num) + "条")])]), n("div", {
+                  staticClass: "list"
+                }, [n("div", {
+                  staticClass: "list_left"
+                }, [t._v("信息内容")]), n("div", {
+                  staticClass: "list_right",
+                  attrs: {
+                    id: "device_version_id"
+                  }
+                }, [t._v(t._s(t.contentArr[5].content))])])])], 1)], 1), n("v-uni-view", {
+                  staticClass: "wifi_container"
+                }, [n("v-uni-view", {
+                  staticClass: "title"
+                }, [n("span", [t._v("用户使用信息")]), n("uni-segmented-control", {
+                  attrs: {
+                    values: t.timeArr,
+                    styleType: "button",
+                    activeColor: "#42a5f5"
+                  },
+                  on: {
+                    clickItem: function(e) {
+                      arguments[0] = e = t.$handleEvent(e), t.onClickWifi.apply(void 0, arguments)
+                    }
+                  }
+                })], 1), n("v-uni-view", {
+                  staticClass: "table_container"
+                }, [n("v-uni-view", {
+                  staticClass: "table_title"
+                }, [t._v("WiFi名称信息")]), n("div", {
+                  staticClass: "table"
+                }, [n("div", {
+                  staticClass: "list"
+                }, [n("div", {
+                  staticClass: "list_left"
+                }, [t._v("使用目的")]), n("div", {
+                  staticClass: "list_right"
+                }, [t._v("在用户授权位置服务权限后，应用会获取WiFi的名称，便于用户查看历史WiFi记录")])]), n("div", {
+                  staticClass: "list"
+                }, [n("div", {
+                  staticClass: "list_left"
+                }, [t._v("使用场景")]), n("div", {
+                  staticClass: "list_right"
+                }, [t._v("用户每次查询历史WiFi记录时")])]), n("div", {
+                  staticClass: "list"
+                }, [n("div", {
+                  staticClass: "list_left"
+                }, [t._v("收集情况")]), n("div", {
+                  staticClass: "list_right",
+                  attrs: {
+                    id: "used_wifi_record"
+                  }
+                }, [t._v("系统记录，已收集" + t._s(t.contentArr[1].num) + "条")])]), n("div", {
+                  staticClass: "list"
+                }, [n("div", {
+                  staticClass: "list_left"
+                }, [t._v("信息内容")]), n("div", {
+                  staticClass: "list_right",
+                  attrs: {
+                    id: "used_wifi_id"
+                  }
+                }, [t._v(t._s(t.contentArr[1].content))])])])], 1)], 1)]
+              },
+              proxy: !0
+            }])
+          })
+        },
+        s = []
+    },
+    bc51: function(t, e, n) {
+      "use strict";
+      n.r(e);
+      var i = n("ab79"),
+        a = n("de1a");
+      for (var s in a)["default"].indexOf(s) < 0 && function(t) {
+        n.d(e, t, (function() {
+          return a[t]
+        }))
+      }(s);
+      n("939c");
+      var o = n("f0c5"),
+        r = Object(o["a"])(a["default"], i["b"], i["c"], !1, null, "db898502", null, !1, i["a"], void 0);
+      e["default"] = r.exports
+    },
+    c300: function(t, e, n) {
+      "use strict";
+      n("7a82");
+      var i = n("4ea4").default;
+      Object.defineProperty(e, "__esModule", {
+        value: !0
+      }), e.default = void 0;
+      var a = i(n("2909"));
+      n("99af"), n("14d9"), n("f4b3"), n("e9c4"), n("d3b7"), n("159b");
+      var s = n("1698");
+      e.default = {
+        data: function() {
+          return {
+            pageState: "loadSuccess",
+            appName: "",
+            timeArr: ["最近7天", "最近30天", "全部"],
+            week_time: 604800,
+            month_time: 2592e3,
+            season_time: 31536e3,
+            contentArr: [{
+              num: 0,
+              content: "无"
+            }, {
+              num: 0,
+              content: "无"
+            }, {
+              num: 0,
+              content: "无"
+            }, {
+              num: 0,
+              content: "无"
+            }, {
+              num: 0,
+              content: "无"
+            }, {
+              num: 0,
+              content: "无"
+            }, {
+              num: 0,
+              content: "/"
+            }],
+            phoneType: "",
+            iosDeviceList: {},
+            iosWifiList: {}
+          }
+        },
+        onLoad: function() {
+          this.phoneType = getApp().globalData.phoneType, this.queryPersonalInfo("all", "1"), this.appName = getApp().globalData.appName
+        },
+        created: function() {
+          document.addEventListener("backbutton", this.handleBackButtonEvent, !1)
+        },
+        destroyed: function() {
+          document.removeEventListener("backbutton", this.handleBackButtonEvent, !1)
+        },
+        methods: {
+          handleBackButtonEvent: function() {
+            var t = getCurrentPages(),
+              e = t[t.length - 1].route;
+            e == this.$mp.page.route && uni.navigateBack()
+          },
+          retry: function() {},
+          onClickDevice: function(t) {
+            var e = t.currentIndex + 1 + "";
+            "android" == this.phoneType ? this.queryPersonalInfo("device", e) : this.iosHandleData(this.iosDeviceList[e])
+          },
+          onClickWifi: function(t) {
+            var e = t.currentIndex + 1 + "";
+            console.log(e), "android" == this.phoneType ? this.queryPersonalInfo("wifi", e) : this.handleData(this.iosWifiList[e])
+          },
+          queryPersonalInfo: function(t, e) {
+            var n = this;
+            s.PluginApi.coolMethod("onQueryPersonalInfo", [t, e], (function(t) {
+              if (console.log("onQueryPersonalInfo->" + JSON.stringify(t)), console.log(t), "android" == n.phoneType)
+                for (var e in t) n.handleData(t[e]);
+              else {
+                var i = [];
+                for (var s in t) n.handleData(t[s]), "wifi" == s ? n.iosWifiList = n.formatterData(t[s]) : "account" == s || i.push.apply(i, (0, a.default)(t[s]));
+                n.iosDeviceList = n.formatterData(i)
+              }
+            }))
+          },
+          handleData: function(t) {
+            var e = this;
+            if (t.length != []) {
+              var n = t[0].type;
+              this.contentArr[n].num = t.length, t.forEach((function(t, i) {
+                0 == i ? e.contentArr[n].content = t.text : e.contentArr[n].content += "," + t.text
+              }))
+            }
+          },
+          iosHandleData: function(t) {
+            var e = [],
+              n = [],
+              i = [],
+              a = [];
+            t.forEach((function(t) {
+              2 == t.type ? e.push(t) : 3 == t.type ? n.push(t) : 5 == t.type ? a.push(t) : i.push(t)
+            })), this.handleData(e), this.handleData(n), this.handleData(i), this.handleData(a)
+          },
+          formatterData: function(t) {
+            var e = this,
+              n = Math.round(new Date / 1e3),
+              i = {};
+            i[this.week_time] = [], i[this.month_time] = [], i[this.season_time] = [], t.forEach((function(t, a) {
+              var s = new Date(t["createTime"]),
+                o = n - s / 1e3;
+              o <= e.season_time && (o <= e.week_time ? i[e.week_time].push(t) : o <= e.month_time ? i[e.month_time].push(t) : i[e.season_time].push(t))
+            })), i[this.month_time] = i[this.month_time].concat(i[this.week_time]), i[this.season_time] = i[this.season_time].concat(i[this.month_time]);
+            var a = {
+              1: i[this.week_time],
+              2: i[this.month_time],
+              3: i[this.season_time]
+            };
+            return a
+          }
+        }
+      }
+    },
+    cbaa: function(t, e, n) {
+      var i = n("ea5b");
+      i.__esModule && (i = i.default), "string" === typeof i && (i = [
+        [t.i, i, ""]
+      ]), i.locals && (t.exports = i.locals);
+      var a = n("4f06").default;
+      a("cf71f362", i, !0, {
+        sourceMap: !1,
+        shadowMode: !1
+      })
+    },
+    cc87: function(t, e, n) {
+      "use strict";
+      n("7a82"), Object.defineProperty(e, "__esModule", {
+        value: !0
+      }), e.default = void 0, n("a9e3");
+      e.default = {
+        name: "UniSegmentedControl",
+        emits: ["clickItem"],
+        props: {
+          current: {
+            type: Number,
+            default: 0
+          },
+          values: {
+            type: Array,
+            default: function() {
+              return []
+            }
+          },
+          activeColor: {
+            type: String,
+            default: "#2979FF"
+          },
+          styleType: {
+            type: String,
+            default: "button"
+          }
+        },
+        data: function() {
+          return {
+            currentIndex: 0
+          }
+        },
+        watch: {
+          current: function(t) {
+            t !== this.currentIndex && (this.currentIndex = t)
+          }
+        },
+        created: function() {
+          this.currentIndex = this.current
+        },
+        methods: {
+          _onClick: function(t) {
+            this.currentIndex !== t && (this.currentIndex = t, this.$emit("clickItem", {
+              currentIndex: t
+            }))
+          }
+        }
+      }
+    },
+    d29d: function(t, e, n) {
+      "use strict";
+      n.r(e);
+      var i = n("651e"),
+        a = n("20f7");
+      for (var s in a)["default"].indexOf(s) < 0 && function(t) {
+        n.d(e, t, (function() {
+          return a[t]
+        }))
+      }(s);
+      n("3dab");
+      var o = n("f0c5"),
+        r = Object(o["a"])(a["default"], i["b"], i["c"], !1, null, "4aa361d3", null, !1, i["a"], void 0);
+      e["default"] = r.exports
+    },
+    db90: function(t, e, n) {
+      "use strict";
+      n("7a82"), Object.defineProperty(e, "__esModule", {
+        value: !0
+      }), e.default = function(t) {
+        if ("undefined" !== typeof Symbol && null != t[Symbol.iterator] || null != t["@@iterator"]) return Array.from(t)
+      }, n("a4d3"), n("e01a"), n("d28b"), n("a630"), n("d3b7"), n("3ca3"), n("ddb0")
+    },
+    de1a: function(t, e, n) {
+      "use strict";
+      n.r(e);
+      var i = n("c300"),
+        a = n.n(i);
+      for (var s in i)["default"].indexOf(s) < 0 && function(t) {
+        n.d(e, t, (function() {
+          return i[t]
+        }))
+      }(s);
+      e["default"] = a.a
+    },
+    e237: function(t, e, n) {
+      var i = n("4d53");
+      i.__esModule && (i = i.default), "string" === typeof i && (i = [
+        [t.i, i, ""]
+      ]), i.locals && (t.exports = i.locals);
+      var a = n("4f06").default;
+      a("8bf87032", i, !0, {
+        sourceMap: !1,
+        shadowMode: !1
+      })
+    },
+    ea5b: function(t, e, n) {
+      var i = n("4bad");
+      e = i(!1), e.push([t.i, '@charset "UTF-8";\n/**\n * 这里是uni-app内置的常用样式变量\n *\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\n *\n */\n/**\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\n *\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\n */\n/* 颜色变量 */\n/* 行为相关颜色 */\n/* 文字基本颜色 */\n/* 背景颜色 */\n/* 边框颜色 */\n/* 尺寸变量 */\n/* 文字尺寸 */\n/* 图片尺寸 */\n/* Border Radius */\n/* 水平间距 */\n/* 垂直间距 */\n/* 透明度 */\n/* 文章场景相关 */\n/*绝对定位-左上角*/\n/*绝对定位-左下角*/\n/*绝对定位-右上角*/\n/*绝对定位-右下角*/\n/*绝对定位-垂直水平居中*/\n/*绝对定位-底部水平居中*/\n/*绝对定位-顶部水平居中*/\n/*固定定位 元素居中*/\n/*粘性定位*/\n/*固定定位*/\n/*-------flexible box--------*/\n/*水平排列*/\n/*水平排列允许换行*/\n/*水平排列 上下居中*/\n/*左右顶头*/\n/*左右顶头 上下居中*/\n/*水平垂直居中*/\n/*水平居中*/\n/*列居中*/\n/*上下顶边*/\n/*-----字号------*/\n/*文字超出省略号*/\n/*背景*/\n/*背景图*/\n/*边框*/\n/*底部边框*/\n/*顶部边框*/\n/*左侧边框*/\n/*右侧边框*/\n/*四边边框*/\n/*过渡动画*/[data-v-db898502] .segmented-control{width:%?400?%;height:%?50?%}[data-v-db898502] .segmented-control__text{font-size:%?28?%}.container[data-v-db898502]{padding:%?30?% %?18?% %?10?%;box-sizing:border-box}.container .tip_container[data-v-db898502]{font-size:%?28?%;text-indent:2em}.container .device_container .table[data-v-db898502]{margin-bottom:%?50?%}.container .device_container .table[data-v-db898502]:last-child{margin-bottom:0}.container .title[data-v-db898502]{font-size:%?30?%;color:#a1a1a1;border-bottom:%?1?% solid #a1a1a1;padding-bottom:%?10?%;margin-top:%?65?%;display:flex;justify-content:space-between;align-items:center}.container .table_container[data-v-db898502]{padding:%?10?% %?20?%}.container .table_container .table_title[data-v-db898502]{font-weight:700;margin-bottom:%?10?%;font-size:%?28?%}.container .table_container .table[data-v-db898502]{border:%?1?% solid #c1c1c1}.container .table_container .table .list[data-v-db898502]{display:flex;align-items:center;border-bottom:%?1?% solid #c1c1c1;font-size:%?28?%;background-color:#f1f1f1}.container .table_container .table .list[data-v-db898502]:last-child{border-bottom:0}.container .table_container .table .list .list_left[data-v-db898502]{min-width:%?150?%;text-align:center;padding:%?10?% 0}.container .table_container .table .list .list_right[data-v-db898502]{padding:%?10?% %?20?%;display:flex;display:-webkit-flex;width:100%;background-color:#fff;text-align:left;align-items:left;justify-content:left;word-wrap:keep-all;word-break:break-word}', ""]), t.exports = e
+    },
+    ea81: function(t, e, n) {
+      var i = n("7c99");
+      i.__esModule && (i = i.default), "string" === typeof i && (i = [
+        [t.i, i, ""]
+      ]), i.locals && (t.exports = i.locals);
+      var a = n("4f06").default;
+      a("4326e34c", i, !0, {
+        sourceMap: !1,
+        shadowMode: !1
+      })
+    }
+  }
+]);

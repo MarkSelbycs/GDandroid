@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 轻量版 AndroidManifest：无 WebView、无 H5、无壳。 -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gdportal.dialer"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk android:minSdkVersion="28" android:targetSdkVersion="34"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+
+    <application
+        android:label="校园轻量拨号"
+        android:usesCleartextTraffic="true"
+        android:allowBackup="false">
+
+        <!-- 核心服务：登录+保活+退出，全部逻辑 -->
+        <service
+            android:name="com.gdportal.android.DialService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync"/>
+
+        <!-- 可选：极简命令行 Activity（am start 触发），不需要可删 -->
+        <activity
+            android:name="com.gdportal.android.CliActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
